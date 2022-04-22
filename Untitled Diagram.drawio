@@ -1,1 +1,22 @@
-<mxfile host="app.diagrams.net" modified="2022-04-22T04:38:16.317Z" agent="5.0 (Windows)" version="17.4.6" etag="soCaGWISnDG5cTLdCTdp" type="github"><diagram id="-BAGWdHoZYMnos2PnbhM">UzV2zq1wL0osyPDNT0nNUTV2VTV2LsrPL4GwciucU3NyVI0MMlNUjV1UjYwMgFjVyA2HrCFY1qAgsSg1rwSLBiADYTaQg2Y1AA==</diagram></mxfile>
+<mxfile host="app.diagrams.net" modified="2022-04-22T04:46:02.616Z" agent="5.0 (Windows)" etag="ICQNYyCXvoHAInBaoRi2" version="17.4.6" type="github">
+  <diagram id="-BAGWdHoZYMnos2PnbhM" name="Page-1">
+    <mxGraphModel dx="784" dy="1104" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="qaUes0zHKys_QFO6AfYa-1" value="User" style="rounded=0;whiteSpace=wrap;html=1;fillColor=default;" vertex="1" parent="1">
+          <mxGeometry x="160" y="220" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="qaUes0zHKys_QFO6AfYa-2" value="Scoreboard" style="rounded=0;whiteSpace=wrap;html=1;fillColor=default;" vertex="1" parent="1">
+          <mxGeometry x="480" y="220" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="qaUes0zHKys_QFO6AfYa-3" value="&lt;div&gt;Has&lt;/div&gt;" style="rhombus;whiteSpace=wrap;html=1;fillColor=default;" vertex="1" parent="1">
+          <mxGeometry x="180" y="310" width="80" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="qaUes0zHKys_QFO6AfYa-4" value="Login" style="rounded=0;whiteSpace=wrap;html=1;fillColor=default;" vertex="1" parent="1">
+          <mxGeometry x="160" y="420" width="120" height="60" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
