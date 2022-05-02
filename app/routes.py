@@ -3,7 +3,6 @@ from app import app
 
 @app.route('/')
 @app.route('/index')
-@app.route('/base')
 
 def index():
     # User login JSON sample
@@ -22,3 +21,7 @@ def index():
     ]
 
     return render_template("index.html",title="Home",user=user, posts=posts)
+
+@app.route('/button')
+def button():
+    return render_template("button.html", title="Button!")

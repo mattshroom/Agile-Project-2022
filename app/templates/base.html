@@ -14,10 +14,11 @@
     <link rel="stylesheet" href="{{ url_for('static',filename='style.css') }}">
 </head>
 <body>
-    <div class="header">Header Sample <a href="/index">Home</a> </div>
+    <div class="header">Header Sample 
+        <a href="/index">Home</a> 
+        <a href="/button">Button!</a>
+    </div>
     <hr>
     {% block content %}{% endblock %}
-    
-    <h1>Sample Text for {{ user.username }}</h1>
 </body>
 </html>
