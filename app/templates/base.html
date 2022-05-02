@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {% if title %}
+    <title>{{ title }}-Placeholder</title>
+    {% else %}
+    <title>Placeholder</title>
+    {% endif %}
+
+
+    <link rel="stylesheet" href="{{ url_for('static',filename='style.css') }}">
+</head>
+<body>
+    <div class="header">Header Sample <a href="/index">Home</a> </div>
+    <hr>
+    {% block content %}{% endblock %}
+    
+    <h1>Sample Text for {{ user.username }}</h1>
+</body>
+</html>
