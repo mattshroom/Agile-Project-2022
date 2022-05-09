@@ -14,7 +14,7 @@ function toggleText() {
 function blurImage(){
     toggle = !toggle;
     if(toggle){
-        document.getElementById("image").style.filter = "blur(3px)";
+        document.getElementById("image").style.filter = "blur(25px)";
     }
     else{
         document.getElementById("image").style.filter = "blur(0px)";
