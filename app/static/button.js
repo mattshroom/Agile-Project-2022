@@ -11,7 +11,11 @@ function toggleText() {
     document.getElementById("textBox").innerHTML = text;
 }
 
-function blurImage(){
+function blurImageStart(){
+    document.getElementById("image").style.filter= "blur(45px)";
+}
+
+function blurImageClick(){
     toggle = !toggle;
     if(toggle){
         document.getElementById("image").style.filter = "blur(25px)";

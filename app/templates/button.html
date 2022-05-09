@@ -3,7 +3,7 @@
 {% block content %}
     <h1>Hello</h1>
     <div>
-        <img id="image" src="../static/logos/nestle.png" onclick="blurImage()" height="500px" width="500px">Adidas Image</img>
+        <img id="image" draggable="false" src="../static/logos/nestle.png" onload="blurImageStart()" onclick="blurImageClick()" height="500px" width="500px">Adidas Image</img>
         <button id="myButton" type="button" onclick="toggleText()">Button!</button>
         <p id="textBox"></p>
     </div>
