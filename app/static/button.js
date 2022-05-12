@@ -11,20 +11,6 @@ function toggleText() {
     document.getElementById("textBox").innerHTML = text;
 }
 
-function blurImageStart(){
-    document.getElementById("image").style.filter= "blur(45px)";
-}
-
-function blurImageClick(){
-    toggle = !toggle;
-    if(toggle){
-        document.getElementById("image").style.filter = "blur(25px)";
-    }
-    else{
-        document.getElementById("image").style.filter = "blur(0px)";
-    }
-}
-
 document.addEventListener("keypress", function(event) {
     if (event.key === "Enter") {
         event.preventDefault();

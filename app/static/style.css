@@ -2,3 +2,10 @@ div.header {
     background-color: palegreen;
     padding: 5px;
 }
+
+.startingBlur {
+    filter : blur(60px);
+    -webkit-filter : blur(60px)   
+}
+
+.unBlur{  transition: filter 10s linear; }
