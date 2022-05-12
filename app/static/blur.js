@@ -5,12 +5,14 @@ var solved = false;
 
 var logo = document.getElementById('logo');
 
-function blurOnStart(){
-    logo.classList.add('startingBlur')
-    // alert("Time's Up!");
-}
+// function blurOnStart(){
+//     logo.classList.add('startingBlur')
+// }
 
 function unblurStart(){
-    logo.classList.add('unBlur');
-    logo.classList.toggle('startingBlur')
+    if(!toggle){
+        toggle = true;
+        logo.classList.add('unBlur');
+        logo.classList.toggle('startingBlur')
+    }
 }
