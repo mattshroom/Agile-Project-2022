@@ -72,13 +72,35 @@ def register():
         return redirect(url_for('login'))
     return render_template('register.html', title='Register', form=form)
 
-@app.route('/users', methods=['POST'])
+#--CRUD ENDPOINTS--
+
+@app.route('/users', methods=['GET'])
 def all_users():
     all = User.query.all()
     return all
 
-@app.route('/users', methods=['POST'])
-def all_users(id):
+@app.route('/users', methods=['GET'])
+def get_user(id):
     u = User.query.get(id)
-    return id
+    return u.username, u.email
+
+@app.route('users', methods=['PATCH, UPDATE'])
+def update_user(id, new_name, new_email):
+    u = User.query.get(id)
+    if new_name:
+        u.username = new_name
+
+    if new_email:
+        u.email = new_email
+    db.session.commit()
+    return 0
+
+@app.route('users', methods=['DELETE'])
+def delete_user(id):
+    u = User.query.get(id)
+    db.session.delete(u)
+    db.session.commit()
+    return 0
+
+
 
