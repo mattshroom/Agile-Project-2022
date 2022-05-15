@@ -3,9 +3,13 @@ div.header {
     padding: 5px;
 }
 
-.startingBlur {
-    filter : blur(60px);
-    -webkit-filter : blur(60px)   
+img.startingBlur {
+    filter: blur(60px);
+}
+.unBlur{  
+    transition: filter 20s ease-out; 
 }
 
-.unBlur{  transition: filter 10s linear; }
+img.blur{
+    filter: blur(60px)
+}
