@@ -2,6 +2,7 @@ var timer = 300000;
 var toggle = false;
 var solved = false;
 var startTime, stopTime, timeDiff, guessNum, score;
+let id = Math.floor((Math.random() * 19) + 1);
 
 // function blurOnStart(){
 //     logo.classList.add('startingBlur')
@@ -39,6 +40,15 @@ function calculateScore(guessNum, timeDiff){
     var score = baseScore - multiplier;
     return score;
 }
+function jsonImage() {
+   fetch('../static/logo_json.json')
+      .then(response => response.json())
+      .then(data => {
+         //document.querySelector("#debug").innerText = data.logos[0].logo_link
+         var image = data.logos[id].logo_link;
+         document.getElementById("imgID").src= image;
+      })
+}
 
 // var countDownDate = new Date("May 15, 2022 18:14:00").getTime();
 
@@ -68,3 +78,6 @@ function calculateScore(guessNum, timeDiff){
 //   }
 // }, 1000);
 
+window.onload = function() {
+    jsonImage()
+}
