@@ -13,3 +13,16 @@ img.startingBlur {
 img.blur{
     filter: blur(60px)
 }
+
+body{
+    background-color: antiquewhite;
+}
+.footer{
+    background-color: #547980;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    color: white;
+    text-align: center;
+}
