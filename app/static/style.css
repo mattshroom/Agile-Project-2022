@@ -7,7 +7,7 @@ img.startingBlur {
     filter: blur(60px);
 }
 .unBlur{  
-    transition: filter 20s ease-out; 
+    transition: filter 120s ease-out; 
 }
 
 img.blur{
@@ -88,4 +88,11 @@ body {
     align-items: center;
     justify-content: center;
     font-size: 48px;
+  }
+
+  #app{
+    position: absolute;
+    top: 8px;
+    right: 16px;
+    font-size: 18px;
   }
