@@ -96,3 +96,13 @@ body {
     right: 16px;
     font-size: 18px;
   }
+
+.footer{
+    background-color: #547980;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    color: white;
+    text-align: center;
+}
