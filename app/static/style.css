@@ -1,5 +1,40 @@
-div.header {
-    background-color: lightgreen;
-    padding: 5px;
+html{
+  background-color:#594F4F;
 }
 
+body {
+    color:red;
+  }
+  .blurgo{
+  color: #E5FCC2;
+  text-align: left;
+}.title{
+  text-align: center;
+}.message{
+  color: red;
+  text-align: center;
+}
+
+.blurgo{
+  padding-top: 20px;
+  padding-bottom: 20px;
+  padding-left: 20px;
+  background-color: #547980;
+}
+
+.buttons{display: inline-block;
+}
+
+.loginpage{
+  padding-top: 100px;
+  text-align: center;
+  color:white;
+}
+
+a.register{
+  color: #E5FCC2;
+}
+
+.therest{
+  background-color:#594F4F;
+}
