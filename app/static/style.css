@@ -13,3 +13,46 @@ img.startingBlur {
 img.blur{
     filter: blur(60px)
 }
+
+/* Modify the navbar style */
+#navbar-custom {
+    background-color: #547980;
+}
+#dropdownMenuButton {
+    background-color: #547980;
+    padding-left:30px;
+    padding-right:30px;
+    color: #E5FCC2;
+    font-family: Bodoni MT;
+    font-size: 25px;
+    font-weight: 900;
+    line-height: 20px;
+    letter-spacing: 0em;
+    text-align: center;
+    padding-top: 14px;
+    padding-bottom: 10px;
+}
+
+.nav-item.nav-link{
+    color: #E5FCC2;
+    font-family: Bodoni MT;
+    font-weight: bold;
+    padding-left:30px;
+    padding-right:30px;
+    color: #E5FCC2;
+    font-family: Bodoni MT;
+    font-size: 25px;
+    font-weight: 900;
+    line-height: 20px;
+    letter-spacing: 0em;
+    text-align: center;
+}
+
+#Blurgo {
+    font-family: Bodoni MT;
+    font-size: 60px;
+    font-weight: 900;
+
+}
+
+#navLinks {justify-content:flex-end;}
