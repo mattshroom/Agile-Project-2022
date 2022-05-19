@@ -156,3 +156,53 @@ input.guessBox{
     text-align: center;
 }
 
+html{
+  background-color:#594F4F;
+}
+
+body {
+    color:white;
+    background-color:#594F4F;
+    text-align: center;
+  }
+  .blurgo{
+  color: #E5FCC2;
+  text-align: left;
+}.title{
+  text-align: center;
+}.message{
+  color: red;
+  text-align: center;
+}
+
+.buttons{display: inline-block;
+}
+
+.loginpage{
+  padding-top: 100px;
+  text-align: center;
+  color:white;
+}
+
+a.register{
+  color: #E5FCC2;
+}
+
+.therest{
+  background-color:#594F4F;
+}
+
+.registration{
+  text-align: center;
+  color: white;
+}
+
+.extrabutton{
+  text-align: center;
+  color: white;
+}
+
+.hello{
+  text-align: center;
+  color: white;
+}
