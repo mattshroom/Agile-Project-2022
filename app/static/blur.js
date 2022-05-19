@@ -104,8 +104,9 @@ function guessCompare() {
                 correctImg.setAttribute("width", "40");
                 document.getElementsByClassName("correct")[0].appendChild(correctImg);
                 //document.body.appendChild(correctImg);
+                console.log(guessCount+1)
             }
-            else {
+            else if(guessCount <= 4){
                 const n = document.createElement('div');
                 n.innerHTML = guess;
                 n.classList.add("incorrect");
@@ -115,6 +116,11 @@ function guessCompare() {
                 wrongImg.setAttribute("height", "40");
                 wrongImg.setAttribute("width", "40");
                 document.getElementsByClassName("incorrect")[guessCount].appendChild(wrongImg);
+                console.log(guessCount+1)
+            }
+            else{
+                console.log("Game Over Man, Game Over")
+                
             }
             guessCount += 1;
         })
