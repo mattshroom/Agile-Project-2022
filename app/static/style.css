@@ -97,6 +97,11 @@ body {
     font-size: 18px;
   }
 
+  .modal.readyModal{
+    background-color: #547980;
+    
+  }
+
 .footer{
     background-color: #547980;
     position: fixed;
@@ -106,3 +111,4 @@ body {
     color: white;
     text-align: center;
 }
+

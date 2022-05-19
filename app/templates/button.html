@@ -3,8 +3,8 @@
 {% block content %}
     
     <!-- Ready Modal -->
-    <div class="modal hide fade" id="readyModal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1">
-        <div class="modal-dialog">
+    <div class="modal hide fade readyModal" id="readyModal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1">
+        <div class="modal-dialog modal-dialog-centered">
             <div class="modal-content">
 
                 <div class="modal-header">
@@ -27,8 +27,6 @@
         <img id="imgID" class="startingBlur" draggable="false" src="" height="300px" width="300px" oncontextmenu="return false;"></img>
         <p id="demo"></p>
     </div>
-
-
 
     <div class="center"> 
         <input type="text" id="userGuess" class="guessBox" name="guess" placeholder="Guess Goes Here">
