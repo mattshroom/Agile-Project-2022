@@ -7,9 +7,9 @@
         <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
         <link href="../static/style.css" rel="stylesheet">
 
+        <!--   Styles for icons    -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
-
-        <!-- JS for Sharing Links -->
         <link href="https://cdn.jsdelivr.net/npm/shareon@2/dist/shareon.min.css" rel="stylesheet">
         <script src="https://cdn.jsdelivr.net/npm/shareon@2/dist/shareon.iife.js" defer init></script>
 
@@ -20,6 +20,61 @@
         {% endif %}
     </head>
     <body>
+
+        <nav class="navbar navbar-expand-sm" id="navbar-custom">
+            <!-- <div class="collapse navbar-collapse" id="navbarNavAltMarkup"> -->
+                <!-- <div class="navbar-nav"> -->
+                        {% if current_user.is_anonymous %}
+                        <div class="navbar-nav">
+                        <div class="dropdown">
+                            <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <i class="fa-solid fa-gear"></i>
+                            </button>
+                            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                <a class="dropdown-item" href="{{ url_for('login') }}">Login</a>
+                            </div>
+                        </div>
+                        </div>
+                        {% else %}
+                        <!-- <div class="collapse navbar-collapse"> -->
+                        <ul class="navbar-nav">
+                           <li>
+                                <a class="nav-item nav-link" href="{{ url_for('index') }}" id ="Profile">Profile <i class="fa-solid fa-square"></i></a>
+                            </li>
+                            <li>
+                                <a class="nav-item nav-link" href="{{ url_for('index') }}"><i class="fa-solid fa-circle-info"></i></a>
+                            </li>
+                        </ul>
+                        <ul class="navbar-nav mx-auto">
+                            <li>
+                                <a class="nav-item nav-link" href="{{ url_for('button') }}"id="Blurgo">Blurgo</a>  
+                            </li>
+                        </ul>
+                        <ul class="navbar-nav margin-left: auto!important;">
+                            <li>
+                                <a class="nav-item nav-link" href="{{ url_for('button') }}"><i class="fa-solid fa-chart-pie"></i></a>  
+                            </li>
+                            <li>
+                            <div class="dropdown" >
+                                <ul class="navbar-nav ms-auto nav-item dropdown">
+                                <li>
+                                    <button class="btn dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                        <i class="fa-solid fa-gear "></i>
+                                    </button>
+                                <div class="dropdown-menu dropdown-menu-end" aria-labelledby="dropdownMenuButton">
+                                    <a class="dropdown-item" href="{{ url_for('logout') }}">Logout</a>
+                                </div>
+                                </li>
+                                </ul>
+                            </div>
+                            </li>
+                        </ul>
+                        {% endif %}
+                </div>
+            </div>
+        </nav> 
+
+
         <div>
             Blurgo:
             <a href="{{ url_for('index') }}">Home</a>
@@ -30,8 +85,7 @@
             {% endif %}
             <a href="{{ url_for('button') }}">Main</a>
         </div>
-        
-        
+
         <hr>
         {% with messages = get_flashed_messages() %}
         {% if messages %}
