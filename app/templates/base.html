@@ -14,17 +14,13 @@
         <div class="blurgo">
             <div id="blurgotitle" class="display-4">Blurgo!
             <div class="buttons">
-                <a href="{{ url_for('index') }}">
-                    <button type="button" class="btn btn-dark btn-lg">Home</button></a>
+                <a href="{{ url_for('index') }}">Home</a>
                 {% if current_user.is_anonymous %}
-                <a href="{{ url_for('login') }}">
-                    <button type="button" class="btn btn-dark btn-lg">Login</button></a>
+                <a href="{{ url_for('login') }}">Login</a>
                 {% else %}
-                <a href="{{ url_for('logout') }}">
-                    <button type="button" class="btn btn-dark btn-lg">Logout</button></a>
+                <a href="{{ url_for('logout') }}">Logout</a>
                 {% endif %}
-                <a href="{{ url_for('button') }}">
-                    <button type="button" class="btn btn-dark btn-lg">Button</button></a>
+                <a href="{{ url_for('button') }}">Button</a>
             </div>
             </div>
         </div>
