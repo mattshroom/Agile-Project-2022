@@ -44,6 +44,8 @@ function calculateScore(guessNum, timeDiff) {
     var score = baseScore - multiplier;
     return score;
 }
+
+
 function jsonImage() {
     fetch('../static/logo_json.json')
         .then(response => response.json())
@@ -118,11 +120,6 @@ function guessCompare() {
         })
 }
 
-window.onload = function () {
-    jsonImage();
-    unblurStart();
-    
-}
 
 const FULL_DASH_ARRAY = 283;
 const WARNING_THRESHOLD = 10;
@@ -237,3 +234,8 @@ function setCircleDasharray() {
     .getElementById("base-timer-path-remaining")
     .setAttribute("stroke-dasharray", circleDasharray);
 }
+
+// Start the ReadyModal on load
+$(document).ready(function(){
+  $("#readyModal").modal('show');
+});

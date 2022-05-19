@@ -1,4 +1,5 @@
 from flask import render_template, url_for, flash, redirect, request, Blueprint
+
 from app import app
 from app.forms import LoginForm 
 
@@ -33,6 +34,7 @@ def index():
     return render_template("index.html",title="Home",user=user, posts=posts)
 
 @app.route('/button')
+@login_required
 def button():
     return render_template("button.html", title="Button!")
 
