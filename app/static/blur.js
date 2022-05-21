@@ -4,6 +4,7 @@ var solved = false;
 var startTime, stopTime, timeDiff, guessNum, score;
 let seed;
 let guessCount = 0;
+
 let numLogos = 19;
 
 const FULL_DASH_ARRAY = 283;
@@ -231,6 +232,7 @@ function guessCompare() {
                   document.getElementById("submitButton").disabled = true;
                   document.getElementById("submit").disabled = true;
                   document.getElementById("userGuess").disabled = true;
+                  
               }
 
               else if(guessCount < 5){
@@ -276,8 +278,19 @@ function guessCompare() {
                   // console.log("Score:",score);
                   console.log("Too many guesses, try again tomorrow!");
               }
+              if (solved) {
+                temp = 'You guessed it right!';
+                document.getElementById('exampleModalLabel').innerHTML = temp;
+                $('#exampleModal').modal('show'); 
+              }
+              else if (!solved && guessCount >= 5){
+                temp = 'Wrong, It was ' + name;
+                document.getElementById('exampleModalLabel').innerHTML = temp;
+                $('#exampleModal').modal('show'); 
+              }
           })
         }
+
 }
 
 
@@ -293,3 +306,4 @@ input.addEventListener("keypress", function(event) {
 $(document).ready(function(){
   $("#readyModal").modal('show');
 });
+
