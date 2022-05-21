@@ -1,138 +1,12 @@
-var timer = 300000;
+const baseScore = 100000;
 var toggle = false;
 var solved = false;
 var startTime, stopTime, timeDiff, guessNum, score;
-let id = Math.floor((Math.random() * 19) + 1);
+let seed;
 let guessCount = 0;
 
-// function blurOnStart(){
-//     logo.classList.add('startingBlur')
-// }
+let numLogos = 19;
 
-
-
-function unblurStart() {
-    
-    var logo1 = document.querySelector("#imgID");
-    if (!toggle) {
-        startTimer();
-        toggle = true;
-        startTime = performance.now();
-        console.log(startTime)
-        console.log("Starting to unblur!")
-        logo1.classList.add('unBlur');
-        logo1.classList.toggle('startingBlur');
-
-    }
-
-    console.log("Waiting...")
-
-    if (performance.now() - startTime != 20000) { // in ms
-        guessNum = 2;
-        console.log("Time's Up!")
-        stopTime = performance.now();
-        timeDiff = stopTime - startTime;
-        score = setInterval(calculateScore, 1000, guessNum, timeDiff);
-        console.log("Score is: ", score)
-        solved = true;
-    }
-}
-
-function calculateScore(guessNum, timeDiff) {
-    const baseScore = 100000;
-    multiplier = (timeDiff * guessNum) / 15;
-    var score = baseScore - multiplier;
-    return score;
-}
-
-
-function jsonImage() {
-    fetch('../static/logo_json.json')
-        .then(response => response.json())
-        .then(data => {
-            //document.querySelector("#debug").innerText = data.logos[0].logo_link
-            var image = data.logos[id].logo_link;
-            document.getElementById("imgID").src = image;
-        })
-}
-
-// var countDownDate = new Date("May 15, 2022 18:14:00").getTime();
-
-// // Update the count down every 1 second
-// var x = setInterval(function() {
-
-//   // Get today's date and time
-//   var now = new Date().getTime();
-
-//   // Find the distance between now and the count down date
-//   var distance = countDownDate - now;
-
-//   // Time calculations for days, hours, minutes and seconds
-//   var days = Math.floor(distance / (1000 * 60 * 60 * 24));
-//   var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-//   var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-//   var seconds = Math.floor((distance % (1000 * 60)) / 1000);
-
-//   // Display the result in the element with id="demo"
-//   document.getElementById("demo").innerHTML = days + "d " + hours + "h "
-//   + minutes + "m " + seconds + "s ";
-
-//   // If the count down is finished, write some text
-//   if (distance < 0) {
-//     clearInterval(x);
-//     document.getElementById("demo").innerHTML = "EXPIRED";
-//   }
-// }, 1000);
-
-function guessCompare() {
-    let guess = document.getElementById("userGuess").value;
-    var wrongGuess = 0;
-    
-    fetch('../static/logo_json.json') //get logoname from json file
-        .then(response => response.json())
-        .then(data => {
-            //document.querySelector("#debug").innerText = data.logos[0].logo_link
-            var name = data.logos[id].name;
-            let result = name.localeCompare(guess); //compare function
-            if (result == 0) { //0 mean guess was right and anything else is wrong
-                //alert("correct");
-                const y = document.createElement('div');
-                y.innerHTML = guess;
-                y.classList.add("correct");
-                document.getElementById("superdiv").appendChild(y);
-                const correctImg = document.createElement("img");
-                correctImg.src = "../static/logos/Correct.png";
-                correctImg.setAttribute("height", "40");
-                correctImg.setAttribute("width", "40");
-                document.getElementsByClassName("correct")[0].appendChild(correctImg);
-                //document.body.appendChild(correctImg);
-                console.log(guessCount+1);
-                temp = 'You guessed it right!';
-                document.getElementById('exampleModalLabel').innerHTML = temp;
-                $('#exampleModal').modal('show'); 
-            }
-            else if(guessCount <= 4){
-                const n = document.createElement('div');
-                n.innerHTML = guess;
-                n.classList.add("incorrect");
-                document.getElementById("superdiv").appendChild(n);
-                const wrongImg = document.createElement("img");
-                wrongImg.src = "../static/logos/Incorrect.png";
-                wrongImg.setAttribute("height", "40");
-                wrongImg.setAttribute("width", "40");
-                document.getElementsByClassName("incorrect")[guessCount].appendChild(wrongImg);
-            }
-            else{
-                console.log("Game Over Man, Game Over")
-                temp = 'Wrong, It was ' + name;
-                document.getElementById('exampleModalLabel').innerHTML = temp;
-                $('#exampleModal').modal('show'); 
-            }
-            guessCount += 1;
-            //document.getElementById('exampleModalLabel').innerHTML = "Statistics";
-        })
-  
-}
 const FULL_DASH_ARRAY = 283;
 const WARNING_THRESHOLD = 10;
 const ALERT_THRESHOLD = 5;
@@ -150,6 +24,30 @@ const COLOR_CODES = {
     threshold: ALERT_THRESHOLD
   }
 };
+
+
+function seedImage() {
+  today = new Date();
+  epoch = new Date(0);
+  seed = today - epoch;
+  var fullDaysSinceEpoch = Math.floor(seed/8.64e7);
+  console.log(fullDaysSinceEpoch);
+
+  return fullDaysSinceEpoch;
+}
+
+// JS Math.random function can't be seeded, so using xorShift PRNG
+// fdse stands for fullDaysSinceEpoch (seeded based on the day)
+function xorShift(fdse) {
+    fdse ^= fdse << 13; fdse ^= fdse >> 17; fdse ^= fdse << 5;
+    return fdse;
+}
+
+let imageSeed = seedImage();
+let id = xorShift(imageSeed);
+// the modulus number MUST = number of objects in logo_json.json
+id = (id%numLogos)+1
+
 
 const TIME_LIMIT = 120;
 let timePassed = 0;
@@ -183,23 +81,46 @@ document.getElementById("app").innerHTML = `
 
 //startTimer();
 
+
 function onTimesUp() {
   clearInterval(timerInterval);
+  removeBlur();
+}
+
+function calculateScore(guessNum, timeTaken) {
+  if(!solved){
+      var score = 0
+  }
+  else if(solved){
+      console.log(timeTaken)
+      multiplier = (timeTaken * guessNum) / 6;
+      var score = baseScore - multiplier;
+  }
+  return Math.round(score);
 }
 
 function startTimer() {
   timerInterval = setInterval(() => {
     timePassed = timePassed += 1;
     timeLeft = TIME_LIMIT - timePassed;
-    document.getElementById("base-timer-label").innerHTML = formatTime(
-      timeLeft
-    );
+    document.getElementById("base-timer-label").innerHTML = formatTime(timeLeft);
     setCircleDasharray();
     setRemainingPathColor(timeLeft);
 
-    if (timeLeft === 0) {
+    // Solved before times up
+    if (solved === true){
       onTimesUp();
+      score = calculateScore(guessCount, timePassed*1000);
+      console.log(score);
     }
+
+    // Times up
+    else if (timeLeft === 0) {
+      onTimesUp();
+      score = calculateScore(guessCount,timePassed*1000);
+      console.log(score)
+    }
+
   }, 1000);
 }
 
@@ -247,10 +168,131 @@ function setCircleDasharray() {
     .setAttribute("stroke-dasharray", circleDasharray);
 }
 
-// Start the ReadyModal on load
-$(document).ready(function(){
-  $("#readyModal").modal('show');
-});
+function unblurStart() {
+    
+    var logo1 = document.querySelector("#imgID");
+    if (!toggle) {
+        startTimer();
+        toggle = true;
+        console.log("Starting to unblur!")
+        logo1.classList.add('unBlur');
+        logo1.classList.toggle('startingBlur');
+    }
+    console.log("Waiting...")
+}
+
+function removeBlur(){
+    var logo1 = document.querySelector("#imgID");
+    logo1.classList.toggle('unBlur');
+    logo1.classList.toggle('unBlurQuick')
+    // logo1.classList.toggle('')
+}
+
+
+function jsonImage() {
+    // let id = Math.floor((Math.random() * 19) + 1);
+    fetch('../static/logo_json.json')
+        .then(response => response.json())
+        .then(data => {
+            //document.querySelector("#debug").innerText = data.logos[0].logo_link
+            var image = data.logos[id].logo_link;
+            document.getElementById("imgID").src = image;
+        })
+}
+
+
+function guessCompare() {
+    if(solved){
+        console.log("You've already won!")
+        
+    }
+
+    else if(!solved && guessCount < 6){
+      let guess = document.getElementById("userGuess").value;
+      fetch('../static/logo_json.json') //get logoname from json file
+          .then(response => response.json())
+          .then(data => {
+              //document.querySelector("#debug").innerText = data.logos[0].logo_link
+              var name = data.logos[id].name;
+              let result = name.localeCompare(guess); //compare function
+              guessCount += 1
+              if (guessCount <= 5 && result == 0) { //0 mean guess was right and anything else is wrong
+                  //alert("correct");
+                  const y = document.createElement('div');
+                  y.innerHTML = guess;
+                  y.classList.add("correct");
+                  document.getElementById("superdiv").appendChild(y);
+                  const correctImg = document.createElement("img");
+                  correctImg.src = "../static/logos/Correct.png";
+                  correctImg.setAttribute("height", "40");
+                  correctImg.setAttribute("width", "40");
+                  document.getElementsByClassName("correct")[0].appendChild(correctImg);
+                  solved = true;
+                  console.log("Winner in ", guessCount)
+                  document.getElementById("submitButton").disabled = true;
+                  document.getElementById("submit").disabled = true;
+                  document.getElementById("userGuess").disabled = true;
+                  
+              }
+
+              else if(guessCount < 5){
+                  const n = document.createElement('div');
+                  n.innerHTML = guess;
+                  n.classList.add("incorrect");
+                  document.getElementById("superdiv").appendChild(n);
+                  const wrongImg = document.createElement("img");
+                  wrongImg.src = "../static/logos/Incorrect.png";
+
+                  wrongImg.setAttribute("height", "40");
+                  wrongImg.setAttribute("width", "40");
+
+                  document.getElementsByClassName("incorrect")[guessCount-1].appendChild(wrongImg);
+                  console.log(guessCount);
+              }
+              else if(guessCount === 5 && !solved){
+                  const n = document.createElement('div');
+                  n.innerHTML = guess;
+                  n.classList.add("incorrect");
+                  document.getElementById("superdiv").appendChild(n);
+                  const wrongImg = document.createElement("img");
+                  wrongImg.src = "../static/logos/Incorrect.png";
+
+                  wrongImg.setAttribute("height", "40");
+                  wrongImg.setAttribute("width", "40");
+
+                  document.getElementsByClassName("incorrect")[guessCount-1].appendChild(wrongImg);
+                  console.log(guessCount);
+                  onTimesUp();
+                  score = calculateScore(guessCount, timePassed*1000);
+                  console.log("Score:", score)
+                  console.log("Game Over Man, Game Over");
+
+                  document.getElementById("submitButton").disabled = true;
+                  document.getElementById("submit").disabled = true;
+                  document.getElementById("userGuess").disabled = true;
+              }
+              else if(guessCount >= 6){
+                  // Hit Max guesses and still not solved
+                  // onTimesUp();
+                  // score = calculateScore(guessCount, timePassed*1000);
+                  // console.log("Score:",score);
+                  console.log("Too many guesses, try again tomorrow!");
+              }
+              if (solved) {
+                temp = 'You guessed it right!';
+                document.getElementById('exampleModalLabel').innerHTML = temp;
+                $('#exampleModal').modal('show'); 
+              }
+              else if (!solved && guessCount >= 5){
+                temp = 'Wrong, It was ' + name;
+                document.getElementById('exampleModalLabel').innerHTML = temp;
+                $('#exampleModal').modal('show'); 
+              }
+          })
+        }
+
+}
+
 
 var input = document.getElementById("userGuess");
 input.addEventListener("keypress", function(event) {
@@ -259,3 +301,9 @@ input.addEventListener("keypress", function(event) {
     document.getElementById("submit").click();
   }
 });
+
+// Start the ReadyModal on load
+$(document).ready(function(){
+  $("#readyModal").modal('show');
+});
+
