@@ -174,7 +174,7 @@ html{
 }
 
 body {
-    color:white;
+    /* color:white; */
     background-color:#594F4F;
     text-align: center;
   }
@@ -218,4 +218,9 @@ a.register{
 .hello{
   text-align: center;
   color: white;
+}
+
+#results-modal{
+  height: 800px;
+ 
 }

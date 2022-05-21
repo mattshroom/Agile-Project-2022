@@ -86,6 +86,8 @@ function jsonImage() {
 
 function guessCompare() {
     let guess = document.getElementById("userGuess").value;
+    var wrongGuess = 0;
+    
     fetch('../static/logo_json.json') //get logoname from json file
         .then(response => response.json())
         .then(data => {
@@ -104,7 +106,10 @@ function guessCompare() {
                 correctImg.setAttribute("width", "40");
                 document.getElementsByClassName("correct")[0].appendChild(correctImg);
                 //document.body.appendChild(correctImg);
-                console.log(guessCount+1)
+                console.log(guessCount+1);
+                temp = 'You guessed it right!';
+                document.getElementById('exampleModalLabel').innerHTML = temp;
+                $('#exampleModal').modal('show'); 
             }
             else if(guessCount <= 4){
                 const n = document.createElement('div');
@@ -116,17 +121,18 @@ function guessCompare() {
                 wrongImg.setAttribute("height", "40");
                 wrongImg.setAttribute("width", "40");
                 document.getElementsByClassName("incorrect")[guessCount].appendChild(wrongImg);
-                console.log(guessCount+1)
             }
             else{
                 console.log("Game Over Man, Game Over")
-                
+                temp = 'Wrong, It was ' + name;
+                document.getElementById('exampleModalLabel').innerHTML = temp;
+                $('#exampleModal').modal('show'); 
             }
             guessCount += 1;
+            //document.getElementById('exampleModalLabel').innerHTML = "Statistics";
         })
+  
 }
-
-
 const FULL_DASH_ARRAY = 283;
 const WARNING_THRESHOLD = 10;
 const ALERT_THRESHOLD = 5;
