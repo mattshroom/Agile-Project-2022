@@ -59,10 +59,18 @@ img.blur{
 #navLinks {justify-content:flex-end;}
 
 input.guessBox{
-    height: 100px;
-    width: 900px
+    height: 70px;
+    width: 800px
 }
-.center, .correct, .incorrect{
+.center{
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 36px;
+    padding: 30px 30px 30px 30px;
+  }
+
+.correct, .incorrect{
     display:flex;
     align-items: center;
     justify-content: center;
@@ -72,19 +80,22 @@ input.guessBox{
 .guessBox{
     text-align: center;
     font-size: 48px;
+    top: 600px;
+    padding: 30px 30px 30px 30px;
 }
 
-/* body {
-    font-family: sans-serif;
-    display: grid;
-    height: 100vh;
-    place-items: center;
-  } */
+.buttonGuess{
+    padding: 15px 15px 15px 15px;
+}
+
+body {
+    background-color: #594F4F;
+  }
   
   .base-timer {
     position: relative;
-    width: 300px;
-    height: 300px;
+    width: 150px;
+    height: 150px;
   }
   
   .base-timer__svg {
@@ -125,8 +136,8 @@ input.guessBox{
   
   .base-timer__label {
     position: absolute;
-    width: 300px;
-    height: 300px;
+    width: 150px;
+    height: 150px;
     top: 0;
     display: flex;
     align-items: center;
@@ -136,9 +147,11 @@ input.guessBox{
 
   #app{
     position: absolute;
-    top: 8px;
+    top: 85px;
     right: 16px;
-    font-size: 18px;
+    font-size: 16px;
+    
+
   }
 
   .modal.readyModal{
@@ -156,3 +169,53 @@ input.guessBox{
     text-align: center;
 }
 
+html{
+  background-color:#594F4F;
+}
+
+body {
+    color:white;
+    background-color:#594F4F;
+    text-align: center;
+  }
+  .blurgo{
+  color: #E5FCC2;
+  text-align: left;
+}.title{
+  text-align: center;
+}.message{
+  color: red;
+  text-align: center;
+}
+
+.buttons{display: inline-block;
+}
+
+.loginpage{
+  padding-top: 100px;
+  text-align: center;
+  color:white;
+}
+
+a.register{
+  color: #E5FCC2;
+}
+
+.therest{
+  background-color:#594F4F;
+}
+
+.registration{
+  text-align: center;
+  color: white;
+}
+
+.extrabutton{
+  text-align: center;
+  color: white;
+}
+
+.hello{
+  text-align: center;
+  color: white;
+}
