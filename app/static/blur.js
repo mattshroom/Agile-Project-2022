@@ -245,3 +245,11 @@ function setCircleDasharray() {
 $(document).ready(function(){
   $("#readyModal").modal('show');
 });
+
+var input = document.getElementById("userGuess");
+input.addEventListener("keypress", function(event) {
+  if (event.key === "Enter") {
+    event.preventDefault();
+    document.getElementById("submit").click();
+  }
+});
