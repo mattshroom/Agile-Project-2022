@@ -9,6 +9,10 @@ img.startingBlur {
 .unBlur{  
     transition: filter 120s ease-out; 
 }
+.unBlurQuick{
+    filter: blur(0px);
+    transition: filter 3s;
+}
 
 img.blur{
     filter: blur(60px)
