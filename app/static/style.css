@@ -59,10 +59,18 @@ img.blur{
 #navLinks {justify-content:flex-end;}
 
 input.guessBox{
-    height: 80px;
-    width: 900px
+    height: 70px;
+    width: 800px
 }
-.center, .correct, .incorrect{
+.center{
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 36px;
+    padding: 30px 30px 30px 30px;
+  }
+
+.correct, .incorrect{
     display:flex;
     align-items: center;
     justify-content: center;
@@ -73,6 +81,11 @@ input.guessBox{
     text-align: center;
     font-size: 48px;
     top: 600px;
+    padding: 30px 30px 30px 30px;
+}
+
+.buttonGuess{
+    padding: 15px 15px 15px 15px;
 }
 
 body {
