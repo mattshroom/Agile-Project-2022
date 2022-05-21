@@ -20,7 +20,6 @@
         {% endif %}
     </head>
     <body>
-
         <nav class="navbar navbar-expand-sm" id="navbar-custom">
             <!-- <div class="collapse navbar-collapse" id="navbarNavAltMarkup"> -->
                 <!-- <div class="navbar-nav"> -->
@@ -42,9 +41,10 @@
                                 <a class="nav-item nav-link" href="{{ url_for('index') }}" id ="Profile">Profile <i class="fa-solid fa-square"></i></a>
                             </li>
                             <li>
-                                <a class="nav-item nav-link" href="{{ url_for('index') }}"><i class="fa-solid fa-circle-info"></i></a>
+                                <button type="button" class="nav-item nav-link" id="info" data-bs-toggle="modal" data-bs-target="#howtoplaymodal"><i class="fa-solid fa-circle-info"></i></button>
                             </li>
                         </ul>
+                        
                         <ul class="navbar-nav mx-auto">
                             <li>
                                 <a class="nav-item nav-link" href="{{ url_for('button') }}"id="Blurgo">Blurgo</a>  
@@ -74,16 +74,30 @@
             </div>
         </nav> 
 
-
-        <div>
-            Blurgo:
-            <a href="{{ url_for('index') }}">Home</a>
-            {% if current_user.is_anonymous %}
-            <a href="{{ url_for('login') }}">Login</a>
-            {% else %}
-            <a href="{{ url_for('logout') }}">Logout</a>
-            {% endif %}
-            <a href="{{ url_for('button') }}">Main</a>
+        <!-- How To Play Modal -->
+        <div class="modal fade" id="howtoplaymodal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered modal-lg">
+                <!-- content -->
+                <div class="modal-content">
+                    <div class="modalTop">
+                        <div class="modal-header">
+                            <h5 class="modal-title">How to Play!</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                    </div>
+                    <div class="modal-body">
+                        <div class="howToPlayBody">
+                    <ul>
+                        <li>Speed is key!</li>
+                        <li>Guess the Blurgo within 5 tries.</li>
+                        <li>The logo will be unblurred slowly over time, up to a maximum of 5 minutes.</li>
+                        <li>It will also unblur slightly every time you guess incorrectly.</li>
+                        <li>A new Blurgo will be available each day!</li>
+                    </ul>
+                </div>
+                </div>
+                </div>
+            </div>
         </div>
 
         <hr>
