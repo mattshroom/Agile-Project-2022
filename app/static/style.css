@@ -30,10 +30,12 @@ img.blur{
     line-height: 20px;
     letter-spacing: 0em;
     text-align: center;
-    padding-top: 14px;
-    padding-bottom: 10px;
 }
-
+img {
+    height: 1em;
+    width: auto;
+    display: inline-block;
+    }
 .nav-item.nav-link{
     color: #E5FCC2;
     font-family: Bodoni MT;
