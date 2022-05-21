@@ -2,8 +2,9 @@ const baseScore = 100000;
 var toggle = false;
 var solved = false;
 var startTime, stopTime, timeDiff, guessNum, score;
-let id = Math.floor((Math.random() * 19) + 1);
+let seed;
 let guessCount = 0;
+let numLogos = 19;
 
 const FULL_DASH_ARRAY = 283;
 const WARNING_THRESHOLD = 10;
@@ -22,6 +23,30 @@ const COLOR_CODES = {
     threshold: ALERT_THRESHOLD
   }
 };
+
+
+function seedImage() {
+  today = new Date();
+  epoch = new Date(0);
+  seed = today - epoch;
+  var fullDaysSinceEpoch = Math.floor(seed/8.64e7);
+  console.log(fullDaysSinceEpoch);
+
+  return fullDaysSinceEpoch;
+}
+
+// JS Math.random function can't be seeded, so using xorShift PRNG
+// fdse stands for fullDaysSinceEpoch (seeded based on the day)
+function xorShift(fdse) {
+    fdse ^= fdse << 13; fdse ^= fdse >> 17; fdse ^= fdse << 5;
+    return fdse;
+}
+
+let imageSeed = seedImage();
+let id = xorShift(imageSeed);
+// the modulus number MUST = number of objects in logo_json.json
+id = (id%numLogos)+1
+
 
 const TIME_LIMIT = 120;
 let timePassed = 0;
@@ -162,7 +187,9 @@ function removeBlur(){
     // logo1.classList.toggle('')
 }
 
+
 function jsonImage() {
+    // let id = Math.floor((Math.random() * 19) + 1);
     fetch('../static/logo_json.json')
         .then(response => response.json())
         .then(data => {
@@ -172,33 +199,6 @@ function jsonImage() {
         })
 }
 
-// var countDownDate = new Date("May 15, 2022 18:14:00").getTime();
-
-// // Update the count down every 1 second
-// var x = setInterval(function() {
-
-//   // Get today's date and time
-//   var now = new Date().getTime();
-
-//   // Find the distance between now and the count down date
-//   var distance = countDownDate - now;
-
-//   // Time calculations for days, hours, minutes and seconds
-//   var days = Math.floor(distance / (1000 * 60 * 60 * 24));
-//   var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-//   var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-//   var seconds = Math.floor((distance % (1000 * 60)) / 1000);
-
-//   // Display the result in the element with id="demo"
-//   document.getElementById("demo").innerHTML = days + "d " + hours + "h "
-//   + minutes + "m " + seconds + "s ";
-
-//   // If the count down is finished, write some text
-//   if (distance < 0) {
-//     clearInterval(x);
-//     document.getElementById("demo").innerHTML = "EXPIRED";
-//   }
-// }, 1000);
 
 function guessCompare() {
     if(solved){
@@ -276,10 +276,8 @@ function guessCompare() {
                   // console.log("Score:",score);
                   console.log("Too many guesses, try again tomorrow!");
               }
-
           })
         }
-
 }
 
 
