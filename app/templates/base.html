@@ -7,9 +7,6 @@
         <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
         <link href="../static/style.css" rel="stylesheet">
 
-        <!--   Styles for icons    -->
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-
         <link href="https://cdn.jsdelivr.net/npm/shareon@2/dist/shareon.min.css" rel="stylesheet">
         <script src="https://cdn.jsdelivr.net/npm/shareon@2/dist/shareon.iife.js" defer init></script>
 
@@ -21,72 +18,47 @@
     </head>
     <body>
 
-        <nav class="navbar navbar-expand-sm" id="navbar-custom">
+        <nav class="navbar navbar-expand-sm py-3" id="navbar-custom">
             <!-- <div class="collapse navbar-collapse" id="navbarNavAltMarkup"> -->
                 <!-- <div class="navbar-nav"> -->
-                        {% if current_user.is_anonymous %}
-                        <div class="navbar-nav">
-                        <div class="dropdown">
-                            <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                <i class="fa-solid fa-gear"></i>
-                            </button>
-                            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                                <a class="dropdown-item" href="{{ url_for('login') }}">Login</a>
-                            </div>
-                        </div>
-                        </div>
-                        {% else %}
-                        <!-- <div class="collapse navbar-collapse"> -->
+                        {% if current_user.is_authenticated %}
+                        <!-- <First Item> -->
                         <ul class="navbar-nav">
                            <li>
-                                <a class="nav-item nav-link" href="{{ url_for('index') }}" id ="Profile">Profile <i class="fa-solid fa-square"></i></a>
+                                <a class="nav-item nav-link" href="{{ url_for('index') }}" id ="Profile">Profile  <img src="/static/logos/Icons/ProfilePic.png"></a>
                             </li>
                             <li>
-                                <a class="nav-item nav-link" href="{{ url_for('index') }}"><i class="fa-solid fa-circle-info"></i></a>
+                                <a class="nav-item nav-link" href="{{ url_for('index') }}"><img src="/static/logos/Icons/info.png"></a> </a>
                             </li>
                         </ul>
+                        <!-- Middle item -->
                         <ul class="navbar-nav mx-auto">
                             <li>
                                 <a class="nav-item nav-link" href="{{ url_for('button') }}"id="Blurgo">Blurgo</a>  
                             </li>
                         </ul>
+                        <!-- Far right Items -->
                         <ul class="navbar-nav margin-left: auto!important;">
                             <li>
-                                <a class="nav-item nav-link" href="{{ url_for('button') }}"><i class="fa-solid fa-chart-pie"></i></a>  
+                                <a class="nav-item nav-link" href="{{ url_for('button') }}"><img src="/static/logos/Icons/Standings.png"></a>  
                             </li>
                             <li>
                             <div class="dropdown" >
-                                <ul class="navbar-nav ms-auto nav-item dropdown">
-                                <li>
-                                    <button class="btn dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                        <i class="fa-solid fa-gear "></i>
-                                    </button>
-                                <div class="dropdown-menu dropdown-menu-end" aria-labelledby="dropdownMenuButton">
-                                    <a class="dropdown-item" href="{{ url_for('logout') }}">Logout</a>
-                                </div>
-                                </li>
+                                <!-- <ul class="navbar-nav ms-auto nav-item dropdown"> -->
+                                <!-- <li> -->
+                                <button class="btn dropdown-toggle" type="button" id="dropdownMenuButton" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    <img src="/static/logos/Icons/Settings.png">
+                                </button>
+                                <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="dropdownMenuButton">
+                                    <li><a class="dropdown-item" href="{{ url_for('logout') }}">Logout</a></li>
                                 </ul>
-                            </div>
                             </li>
                         </ul>
                         {% endif %}
-                </div>
-            </div>
+        <!--         </div>
+            </div> -->
         </nav> 
 
-
-        <!-- <div>
-            Blurgo:
-            <a href="{{ url_for('index') }}">Home</a>
-            {% if current_user.is_anonymous %}
-            <a href="{{ url_for('login') }}">Login</a>
-            {% else %}
-            <a href="{{ url_for('logout') }}">Logout</a>
-            {% endif %}
-            <a href="{{ url_for('button') }}">Main</a>
-        </div> -->
-
-        <!-- <hr> -->
         {% with messages = get_flashed_messages() %}
         {% if messages %}
         <ul>
