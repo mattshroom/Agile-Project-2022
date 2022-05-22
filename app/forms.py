@@ -1,5 +1,5 @@
 from flask_wtf import FlaskForm
-from wtforms import StringField, PasswordField, BooleanField, SubmitField
+from wtforms import StringField, PasswordField, BooleanField, SubmitField, IntegerField
 from wtforms.validators import ValidationError, DataRequired, Email, EqualTo
 from app.models import User
 
@@ -28,3 +28,10 @@ class RegistrationForm(FlaskForm):
         user = User.query.filter_by(email=email.data).first()
         if user is not None:
             raise ValidationError('Please use a different email address.')
+
+class ResultsForm(FlaskForm):
+        score =  IntegerField('finalscore', validators=[DataRequired()])
+        guesses = IntegerField('finalguesses', validators=[DataRequired()])
+        time = IntegerField('finaltime', validators=[DataRequired()])
+        logo = IntegerField('finallogo', validators=[DataRequired()])
+        submit = SubmitField('submitResult')

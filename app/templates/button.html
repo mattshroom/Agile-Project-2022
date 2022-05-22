@@ -37,9 +37,9 @@
             <div class="modal-body">
                 <h6>Results</h6>
                 <div>Win %</div>
-                <div>Guesses</div>
-                <div>Time</div>
-                <div>Score</div>
+                <div id="guessNumModal">Guesses</div>
+                <div id="timeTakenModal">Time</div>
+                <div id="scoreModal">Score</div>
             </div>
             <div class="modal-footer">
                 <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Close</button>
@@ -48,6 +48,30 @@
         </div>
     </div>
 </div>
+
+    <!-- Hidden Form For Game Stats -->
+    <!-- if solved then form submit -->
+
+    <form method="POST" name="resultForm" id="results">
+                {{ form.hidden_tag() }}
+                <input type="hidden" id="scoreFinal" name="scoreFinal">
+                    {{ form.score.label }}
+                    {{ form.score }}
+                </input>
+                <input type="hidden" id="guessNumFinal" name="guessNumFinal">
+                    {{ form.guesses.label }}
+                    {{ form.guesses }}
+                </input>
+                <input type="hidden" id="timeTakenFinal" name="timeTakenFinal">
+                    {{ form.time.label }}
+                    {{ form.time }}
+                </input>
+                <input type="hidden" id="logoFinal" name="logoFinal">
+                    {{ form.logo.label }}
+                    {{ form.logo}}
+                </input>
+                <input type="button" id="resultSubmit"> Save Results{{ form.submit() }}</input>
+    </form> 
 
 <div class="center">
     <img id="imgID" class="startingBlur" draggable="false" src="" height="300px" width="300px"
@@ -60,10 +84,10 @@
     <div class="buttonGuess">
         <button class="btn btn-lg btn-primary" id="submitButton" onclick="guessCompare()">Submit</button>
     </div>
-    <button id="submit" type="submit" onclick="guessCompare()" onkeypress="guessCompare()" hidden>Submit</button>
+    <button id="submitBtn" type="submit" onclick="guessCompare()" onkeypress="guessCompare()" hidden>Submit</button>
 
 </div>
-<button id="submit" type="submit" onclick="guessCompare()" onkeypress="guessCompare()" hidden>Submit</button>
+<button id="submitBtn" type="submit" onclick="guessCompare()" onkeypress="guessCompare()" hidden>Submit</button>
 
 <div id="superdiv">
 

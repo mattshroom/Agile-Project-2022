@@ -1,7 +1,7 @@
 const baseScore = 100000;
 var toggle = false;
 var solved = false;
-var startTime, stopTime, timeDiff, guessNum, score;
+var score;
 let seed;
 let guessCount = 0;
 
@@ -86,18 +86,38 @@ function onTimesUp() {
   clearInterval(timerInterval);
   removeBlur();
   document.getElementById("submitButton").disabled = true;
-  document.getElementById("submit").disabled = true;
+  document.getElementById("submitBtn").disabled = true;
   document.getElementById("userGuess").disabled = true;
 }
 
 function calculateScore(guessNum, timeTaken) {
   if (!solved) {
-    var score = 0
+    var newScore = 0
   }
   else if (solved) {
-    var score = baseScore - (5 / 12) * timeTaken - (50000 - (5 / guessNum) * 10000);
+    var newScore = Math.round(baseScore - (5 / 12) * timeTaken - (50000 - (5 / guessNum) * 10000));
   }
-  return Math.round(score);
+  submitForm(newScore);
+  resultsModal(newScore);
+  return newScore;
+}
+function resultsModal(){
+  document.getElementById("guessNumModal").innerHTML = "Guesses: " + guessCount;
+  document.getElementById("timeTakenModal").innerHTML = "Time Used (sec): " + timePassed;
+  document.getElementById("scoreModal").innerHTML = "Score: " + newScore;
+}
+
+function submitForm(newScore) {
+    /* Display Results */
+    document.getElementById("guessNumFinal").value = guessCount;
+    document.getElementById("timeTakenFinal").value = timePassed;
+    console.log("here is score ", newScore)
+    document.getElementById("scoreFinal").value = newScore;
+    document.getElementById("logoFinal").value = id;
+    //document.getElementById("results").submit();
+    //document.forms["resultForm"].submit();
+    //document.forms["resultForm"].submit();
+    //document.resultForm.submit();
 }
 
 function startTimer() {
@@ -247,7 +267,7 @@ function guessCompare() {
           solved = true;
           console.log("Winner in ", guessCount)
           document.getElementById("submitButton").disabled = true;
-          document.getElementById("submit").disabled = true;
+          document.getElementById("submitBtn").disabled = true;
           document.getElementById("userGuess").disabled = true;
 
         }
@@ -285,7 +305,7 @@ function guessCompare() {
           console.log("Game Over Man, Game Over");
 
           document.getElementById("submitButton").disabled = true;
-          document.getElementById("submit").disabled = true;
+          document.getElementById("submitBtn").disabled = true;
           document.getElementById("userGuess").disabled = true;
         }
         else if (guessCount >= 6) {
@@ -314,12 +334,12 @@ var input = document.getElementById("userGuess");
 input.addEventListener("keypress", function (event) {
   if (event.key === "Enter") {
     event.preventDefault();
-    document.getElementById("submit").click();
+    document.getElementById("submitBtn").click();
   }
 });
 
 // Start the ReadyModal on load
-$(document).ready(function () {
+window.addEventListener('load', function() {
   $("#readyModal").modal('show');
 });
 
