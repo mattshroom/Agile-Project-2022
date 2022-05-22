@@ -79,9 +79,6 @@ document.getElementById("app").innerHTML = `
 </div>
 `;
 
-//startTimer();
-
-
 function onTimesUp() {
   clearInterval(timerInterval);
   removeBlur();

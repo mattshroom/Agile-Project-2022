@@ -27,6 +27,13 @@ body {
   text-align: center;
 }
 
+div.timer {
+  text-align: center;
+  margin: 1em;
+  color: white;
+  font-family: "Segoe UI";
+  font-size: xx-large;
+}
 
 /* Modify the navbar style */
 #navbar-custom {
