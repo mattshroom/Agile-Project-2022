@@ -29,7 +29,9 @@ const COLOR_CODES = {
 function seedImage() {
   today = new Date();
   epoch = new Date(0);
+
   seed = today - epoch;
+  // 8.64e7 = 86 400 000 ms = 1 day
   var fullDaysSinceEpoch = Math.floor(seed / 8.64e7);
   console.log(fullDaysSinceEpoch);
 
