@@ -195,28 +195,9 @@ input.guessBox {
   text-align: center;
 }
 
-html {
-  background-color: #594F4F;
-}
-
 .blurgo {
   color: #E5FCC2;
   text-align: left;
-}
-
-.message {
-  color: red;
-  text-align: center;
-}
-
-.loginpage {
-  padding-top: 100px;
-  text-align: center;
-  color: white;
-}
-
-.therest {
-  background-color: #594F4F;
 }
 
 @font-face {
