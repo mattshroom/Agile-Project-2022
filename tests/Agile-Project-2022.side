@@ -1,0 +1,203 @@
+{
+  "id": "9a389649-8455-475f-a5ed-ace86663dd86",
+  "version": "2.0",
+  "name": "Agile-Project-2022",
+  "url": "http://127.0.0.1:5000",
+  "tests": [{
+    "id": "47073585-0b26-4445-9fc5-6c915a34593e",
+    "name": "How To Play Functionality",
+    "commands": [{
+      "id": "74651184-5934-4d48-86b4-aee639a42219",
+      "comment": "",
+      "command": "open",
+      "target": "/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "b7934355-7baf-4d0c-be3a-44bc51111487",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "960x1175",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "2549b7bf-0b68-4e07-9492-b31ec2f27e42",
+      "comment": "",
+      "command": "click",
+      "target": "css=img:nth-child(2)",
+      "targets": [
+        ["css=img:nth-child(2)", "css:finder"],
+        ["xpath=//button[@id='info']/img", "xpath:idRelative"],
+        ["xpath=//button/img", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "f3a8b016-d0cd-41d8-89b3-95a62e548ade",
+      "comment": "",
+      "command": "click",
+      "target": "id=howtoplaymodal",
+      "targets": [
+        ["id=howtoplaymodal", "id"],
+        ["css=#howtoplaymodal", "css:finder"],
+        ["xpath=//div[@id='howtoplaymodal']", "xpath:attributes"],
+        ["xpath=//body/div", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "1d61717f-cd95-46e5-999d-713d948d3dc5",
+      "comment": "",
+      "command": "mouseOver",
+      "target": "css=img:nth-child(2)",
+      "targets": [
+        ["css=img:nth-child(2)", "css:finder"],
+        ["xpath=//button[@id='info']/img", "xpath:idRelative"],
+        ["xpath=//button/img", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "7daf78dd-3616-4522-9159-f0c602ae6140",
+      "comment": "",
+      "command": "click",
+      "target": "css=img:nth-child(2)",
+      "targets": [
+        ["css=img:nth-child(2)", "css:finder"],
+        ["xpath=//button[@id='info']/img", "xpath:idRelative"],
+        ["xpath=//button/img", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "f9579a37-0bb7-41b0-8595-a1e6caef329e",
+      "comment": "",
+      "command": "mouseOut",
+      "target": "css=img:nth-child(2)",
+      "targets": [
+        ["css=img:nth-child(2)", "css:finder"],
+        ["xpath=//button[@id='info']/img", "xpath:idRelative"],
+        ["xpath=//button/img", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "b239690f-fadd-4c9e-adb3-b2885ea496a3",
+      "comment": "",
+      "command": "click",
+      "target": "css=.btn-close",
+      "targets": [
+        ["css=.btn-close", "css:finder"],
+        ["xpath=(//button[@type='button'])[3]", "xpath:attributes"],
+        ["xpath=//div[@id='howtoplaymodal']/div/div/div/div/button", "xpath:idRelative"],
+        ["xpath=//div/div/button", "xpath:position"]
+      ],
+      "value": ""
+    }]
+  }, {
+    "id": "016de74c-725a-4f20-8264-db48d2cb0902",
+    "name": "Load Today's Blurgo",
+    "commands": [{
+      "id": "39bb48f1-7a3f-4dd9-8d30-e66d8a9f9ed0",
+      "comment": "",
+      "command": "open",
+      "target": "/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "489d4f4a-a488-4ada-960b-fbeffcb480fd",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "960x1175",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "721f4ead-6dd9-453d-9957-b147c63e7612",
+      "comment": "",
+      "command": "click",
+      "target": "id=Blurgo",
+      "targets": [
+        ["id=Blurgo", "id"],
+        ["linkText=Blurgo", "linkText"],
+        ["css=#Blurgo", "css:finder"],
+        ["xpath=//a[contains(text(),'Blurgo')]", "xpath:link"],
+        ["xpath=//a[@id='Blurgo']", "xpath:attributes"],
+        ["xpath=//nav[@id='navbar-custom']/ul[2]/li/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, '/button')]", "xpath:href"],
+        ["xpath=//ul[2]/li/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Blurgo')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "3d356fcd-bddd-433f-83a9-48234cd8c59c",
+      "comment": "",
+      "command": "click",
+      "target": "css=.btn:nth-child(2)",
+      "targets": [
+        ["css=.btn:nth-child(2)", "css:finder"],
+        ["xpath=(//button[@type='button'])[5]", "xpath:attributes"],
+        ["xpath=//div[@id='readyModal']/div/div/div[3]/button[2]", "xpath:idRelative"],
+        ["xpath=//button[2]", "xpath:position"],
+        ["xpath=//button[contains(.,'Start!')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "c439bbfd-6cea-48c1-a6d7-217e41f3deea",
+      "comment": "",
+      "command": "click",
+      "target": "id=userGuess",
+      "targets": [
+        ["id=userGuess", "id"],
+        ["name=guess", "name"],
+        ["css=#userGuess", "css:finder"],
+        ["xpath=//input[@id='userGuess']", "xpath:attributes"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "bb6def5d-afff-444f-9268-15ed4465992d",
+      "comment": "",
+      "command": "type",
+      "target": "id=userGuess",
+      "targets": [
+        ["id=userGuess", "id"],
+        ["name=guess", "name"],
+        ["css=#userGuess", "css:finder"],
+        ["xpath=//input[@id='userGuess']", "xpath:attributes"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "apple"
+    }, {
+      "id": "d913727d-2f36-4a6b-8099-16825dfe60dd",
+      "comment": "",
+      "command": "click",
+      "target": "id=submitButton",
+      "targets": [
+        ["id=submitButton", "id"],
+        ["css=#submitButton", "css:finder"],
+        ["xpath=//button[@id='submitButton']", "xpath:attributes"],
+        ["xpath=//div[5]/div/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Submit')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "78895e69-dea8-4787-8b56-26bafa345700",
+      "comment": "",
+      "command": "click",
+      "target": "css=.btn-primary:nth-child(1)",
+      "targets": [
+        ["css=.btn-primary:nth-child(1)", "css:finder"],
+        ["xpath=(//button[@type='button'])[7]", "xpath:attributes"],
+        ["xpath=//div[@id='results-modal']/div[3]/button", "xpath:idRelative"],
+        ["xpath=//div[3]/div/div/div[3]/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Close')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }]
+  }],
+  "suites": [{
+    "id": "ed71aeb6-216a-4c52-aa18-080004e669c2",
+    "name": "Default Suite",
+    "persistSession": false,
+    "parallel": false,
+    "timeout": 300,
+    "tests": []
+  }],
+  "urls": ["http://127.0.0.1:5000/"],
+  "plugins": []
+}
