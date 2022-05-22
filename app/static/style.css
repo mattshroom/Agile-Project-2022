@@ -1,261 +1,268 @@
-div.header {
-    background-color: lightgreen;
-    padding: 5px;
+img {
+  /* height: 1em; */
+  width: auto;
+  display: inline-block;
 }
 
 img.startingBlur {
-    filter: blur(60px);
-}
-.unBlur{  
-    transition: filter 120s ease-out; 
-}
-.unBlurQuick{
-    filter: blur(0px);
-    transition: filter 3s;
+  filter: blur(60px);
 }
 
-img.blur{
-    filter: blur(60px)
+.unBlur {
+  transition: filter 120s ease-out;
+}
+
+.unBlurQuick {
+  filter: blur(0px);
+  transition: filter 3s;
+}
+
+img.blur {
+  filter: blur(60px)
+}
+
+body {
+  background-color: #594F4F;
+  color: white;
+  text-align: center;
 }
 
 
 /* Modify the navbar style */
 #navbar-custom {
-    background-color: #547980;
+  background-color: #547980;
 }
+
 #dropdownMenuButton {
-    background-color: #547980;
-    padding-left:30px;
-    padding-right:30px;
-    color: #E5FCC2;
-    font-family: Bodoni MT;
-    font-size: 25px;
-    font-weight: 900;
-    line-height: 20px;
-    letter-spacing: 0em;
-    text-align: center;
+  background-color: #547980;
+  padding-left: 30px;
+  padding-right: 30px;
+  color: #E5FCC2;
+  font-family: Bodoni MT;
+  font-size: 25px;
+  font-weight: 900;
+  line-height: 20px;
+  letter-spacing: 0em;
+  text-align: center;
 }
-img {
-    /* height: 1em;
-    width: auto; */
-    display: inline-block;
-    }
-.nav-item.nav-link{
-    color: #E5FCC2;
-    font-family: Bodoni MT;
-    font-weight: bold;
-    padding-left:30px;
-    padding-right:30px;
-    color: #E5FCC2;
-    font-family: Bodoni MT;
-    font-size: 25px;
-    font-weight: 900;
-    line-height: 20px;
-    letter-spacing: 0em;
-    text-align: center;
+
+.nav-item.nav-link {
+  color: #E5FCC2;
+  font-family: Bodoni MT;
+  font-weight: bold;
+  padding-left: 30px;
+  padding-right: 30px;
+  color: #E5FCC2;
+  font-family: Bodoni MT;
+  font-size: 25px;
+  font-weight: 900;
+  line-height: 20px;
+  letter-spacing: 0em;
+  text-align: center;
 }
 
 #Blurgo {
-    font-family: Bodoni MT;
-    font-size: 60px;
-    font-weight: 900;
+  font-family: Bodoni MT;
+  font-size: 60px;
+  font-weight: 900;
 
 }
 
-#navLinks {justify-content:flex-end;}
-
-input.guessBox{
-    height: 70px;
-    width: 800px
-}
-.center{
-    display:flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 36px;
-    padding: 30px 30px 30px 30px;
-  }
-
-.correct, .incorrect{
-    display:flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 36px;
+#navLinks {
+  justify-content: flex-end;
 }
 
-.guessBox{
-    text-align: center;
-    font-size: 48px;
-    top: 600px;
-    padding: 30px 30px 30px 30px;
+input.guessBox {
+  height: 70px;
+  width: 800px
 }
 
-.buttonGuess{
-    padding: 15px 15px 15px 15px;
+.center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 36px;
+  padding: 30px 30px 30px 30px;
 }
 
-body {
-    background-color: #594F4F;
-  }
-  
-  .base-timer {
-    position: relative;
-    width: 150px;
-    height: 150px;
-  }
-  
-  .base-timer__svg {
-    transform: scaleX(-1);
-  }
-  
-  .base-timer__circle {
-    fill: none;
-    stroke: none;
-  }
-  
-  .base-timer__path-elapsed {
-    stroke-width: 7px;
-    stroke: grey;
-  }
-  
-  .base-timer__path-remaining {
-    stroke-width: 7px;
-    stroke-linecap: round;
-    transform: rotate(90deg);
-    transform-origin: center;
-    transition: 1s linear all;
-    fill-rule: nonzero;
-    stroke: currentColor;
-  }
-  
-  .base-timer__path-remaining.green {
-    color: rgb(65, 184, 131);
-  }
-  
-  .base-timer__path-remaining.orange {
-    color: orange;
-  }
-  
-  .base-timer__path-remaining.red {
-    color: red;
-  }
-  
-  .base-timer__label {
-    position: absolute;
-    width: 150px;
-    height: 150px;
-    top: 0;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 48px;
-  }
-
-  #app{
-    position: absolute;
-    top: 85px;
-    right: 16px;
-    font-size: 16px;
-    
-
-  }
-
-  .modal.readyModal{
-    background-color: #547980;
-    
-  }
-
-.footer{
-    background-color: #547980;
-    position: fixed;
-    left: 0;
-    bottom: 0;
-    width: 100%;
-    color: white;
-    text-align: center;
+.correct,
+.incorrect {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 36px;
 }
 
-html{
-  background-color:#594F4F;
+.guessBox {
+  text-align: center;
+  font-size: 48px;
+  top: 600px;
+  padding: 30px 30px 30px 30px;
 }
 
-body {
-    /* color:white; */
-    background-color:#594F4F;
-    text-align: center;
-  }
-  .blurgo{
+.buttonGuess {
+  padding: 15px 15px 15px 15px;
+}
+
+.base-timer {
+  position: relative;
+  width: 150px;
+  height: 150px;
+}
+
+.base-timer__svg {
+  transform: scaleX(-1);
+}
+
+.base-timer__circle {
+  fill: none;
+  stroke: none;
+}
+
+.base-timer__path-elapsed {
+  stroke-width: 7px;
+  stroke: grey;
+}
+
+.base-timer__path-remaining {
+  stroke-width: 7px;
+  stroke-linecap: round;
+  transform: rotate(90deg);
+  transform-origin: center;
+  transition: 1s linear all;
+  fill-rule: nonzero;
+  stroke: currentColor;
+}
+
+.base-timer__path-remaining.green {
+  color: rgb(65, 184, 131);
+}
+
+.base-timer__path-remaining.orange {
+  color: orange;
+}
+
+.base-timer__path-remaining.red {
+  color: red;
+}
+
+.base-timer__label {
+  position: absolute;
+  width: 150px;
+  height: 150px;
+  top: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 48px;
+}
+
+#app {
+  position: absolute;
+  top: 85px;
+  right: 16px;
+  font-size: 16px;
+
+
+}
+
+.modal.readyModal {
+  background-color: #547980;
+
+}
+
+.footer {
+  background-color: #547980;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  color: white;
+  text-align: center;
+}
+
+html {
+  background-color: #594F4F;
+}
+
+.blurgo {
   color: #E5FCC2;
   text-align: left;
-}.title{
+}
+
+.title {
   text-align: center;
-}.message{
+}
+
+.message {
   color: red;
   text-align: center;
 }
 
-.buttons{display: inline-block;
+.buttons {
+  display: inline-block;
 }
 
-.loginpage{
+.loginpage {
   padding-top: 100px;
   text-align: center;
-  color:white;
+  color: white;
 }
 
-a.register{
+a.register {
   color: #E5FCC2;
 }
 
-.therest{
-  background-color:#594F4F;
+.therest {
+  background-color: #594F4F;
 }
 
-.registration{
+.registration {
   text-align: center;
   color: white;
 }
 
-.extrabutton{
+.extrabutton {
   text-align: center;
   color: white;
 }
 
-.hello{
+.hello {
   text-align: center;
   color: white;
 }
 
-.modal{
+.modal {
   color: black;
   text-align: left;
 }
 
-@font-face{
+@font-face {
   font-family: "Segoe UI";
   src: url("../static/fonts/segoe-ui-4-cufonfonts/Segoe UI.ttf");
 }
 
-.modalTop{
+.modalTop {
   background-color: #547980;
   color: white;
   font-size: x-large;
 }
-.modal-body{
+
+.modal-body {
   background-color: #594F4F;
   color: white;
   font-family: "Segoe UI";
   font-size: larger;
 }
 
-.scoreboard-table{
+.scoreboard-table {
   background-color: #594F4F;
   color: white;
   font-family: "Segoe UI";
   font-size: medium;
 }
 
-#info{
+#info {
   background-color: transparent;
   border: none;
 }
