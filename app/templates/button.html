@@ -37,6 +37,15 @@
                             var h = Math.floor(leftTime / 3600);
                             var m = Math.floor((leftTime - (h * 3600)) / 60);
                             var s = Math.floor(leftTime % 60);
+                            if(h < 1){
+                                h = "0"+h;
+                            }
+                            if(m < 10){
+                                m = "0"+m;
+                            }
+                            if(s < 10){
+                                s= "0"+s;
+                            }
                             timer.innerHTML =  h + " : " + m + " : " + s;
                             leftTime--;
                         }
