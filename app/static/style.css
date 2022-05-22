@@ -72,7 +72,27 @@ div.timer {
   font-family: Bodoni MT;
   font-size: 60px;
   font-weight: 900;
+  padding-left: 17.5%;
+}
 
+#Blurgo:hover {
+  opacity: 0.5;
+}
+
+#profile:hover {
+  opacity: 0.5;
+}
+
+#info:hover {
+  opacity: 0.5;
+}
+
+#Scoreboard:hover {
+  opacity: 0.5;
+}
+
+#dropdownMenuButton:hover {
+  opacity: 0.5;
 }
 
 #navLinks {
@@ -272,4 +292,11 @@ a.register {
 #info {
   background-color: transparent;
   border: none;
+}
+
+.profilePage {
+  position: absolute;
+  transform: translate(-50%, -50%);
+  top: 50%;
+  left: 50%;
 }
