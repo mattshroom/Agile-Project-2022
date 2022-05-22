@@ -15,6 +15,7 @@
                 Time until next Blurgo:
                 <div class="timer" id="nextDayTimer">
                     <script>
+                        // Get the current time, then compare it against midnight
                         var date = new Date();
                         var second = date.getSeconds();
                         var minute = date.getMinutes();
@@ -29,7 +30,7 @@
 
                         var leftTime = (leftHour * 3600) + (leftMinute * 60) + leftSeconds;
                         var timer = document.getElementById('nextDayTimer');
-
+                        // Update timer every 1000ms (1s)
                         setInterval(updateTimer, 1000);
 
                         function updateTimer() {
