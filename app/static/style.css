@@ -75,22 +75,10 @@ div.timer {
   padding-left: 17.5%;
 }
 
-#Blurgo:hover {
-  opacity: 0.5;
-}
-
-#profile:hover {
-  opacity: 0.5;
-}
-
-#info:hover {
-  opacity: 0.5;
-}
-
-#Scoreboard:hover {
-  opacity: 0.5;
-}
-
+#Blurgo:hover,
+#profile:hover,
+#info:hover,
+#Scoreboard:hover,
 #dropdownMenuButton:hover {
   opacity: 0.5;
 }
@@ -190,7 +178,6 @@ input.guessBox {
   right: 16px;
   font-size: 16px;
 
-
 }
 
 .modal.readyModal {
@@ -217,17 +204,9 @@ html {
   text-align: left;
 }
 
-.title {
-  text-align: center;
-}
-
 .message {
   color: red;
   text-align: center;
-}
-
-.buttons {
-  display: inline-block;
 }
 
 .loginpage {
@@ -236,32 +215,8 @@ html {
   color: white;
 }
 
-a.register {
-  color: #E5FCC2;
-}
-
 .therest {
   background-color: #594F4F;
-}
-
-.registration {
-  text-align: center;
-  color: white;
-}
-
-.extrabutton {
-  text-align: center;
-  color: white;
-}
-
-.hello {
-  text-align: center;
-  color: white;
-}
-
-.modal {
-  color: black;
-  text-align: left;
 }
 
 @font-face {
@@ -280,6 +235,7 @@ a.register {
   color: white;
   font-family: "Segoe UI";
   font-size: larger;
+  text-align: left;
 }
 
 .scoreboard-table {
@@ -294,9 +250,19 @@ a.register {
   border: none;
 }
 
-.profilePage {
+.profilePage,
+.registrationPage,
+.loginPage {
   position: absolute;
   transform: translate(-50%, -50%);
-  top: 50%;
+  top: 40%;
   left: 50%;
+}
+
+#registerButton {
+  position: absolute;
+  position: absolute;
+  transform: translate(-50%, -50%);
+  top: 5%;
+  left: 5%;
 }
