@@ -49,6 +49,7 @@ let id = xorShift(imageSeed);
 id = (id % numLogos) + 1
 
 
+
 const TIME_LIMIT = 120;
 let timePassed = 0;
 let timeLeft = TIME_LIMIT;
@@ -222,12 +223,12 @@ function guessCompare() {
   }
 
   else if (!solved && guessCount < 6) {
-    let guess = document.getElementById("userGuess").value;
+    let guess = document.getElementById("userGuess").value.toLowerCase();
     fetch('../static/logo_json.json') //get logoname from json file
       .then(response => response.json())
       .then(data => {
         //document.querySelector("#debug").innerText = data.logos[0].logo_link
-        var name = data.logos[id].name;
+        var name = data.logos[id].name.toLowerCase();
         let result = name.localeCompare(guess); //compare function
         guessCount += 1
         if (guessCount <= 5 && result == 0) { //0 mean guess was right and anything else is wrong
@@ -246,7 +247,6 @@ function guessCompare() {
           document.getElementById("submitButton").disabled = true;
           document.getElementById("submit").disabled = true;
           document.getElementById("userGuess").disabled = true;
-
         }
 
         else if (guessCount < 5) {
