@@ -34,7 +34,8 @@
             </li>
             <li>
                 <button type="button" class="nav-item nav-link" id="info" data-bs-toggle="modal"
-                    data-bs-target="#howtoplaymodal"><i class="fa-solid fa-circle-info"></i></button>
+                    data-bs-target="#howtoplaymodal"><i class="fa-solid fa-circle-info"></i><img
+                        src="/static/logos/Icons/Info.png"></button>
             </li>
         </ul>
 
@@ -46,9 +47,8 @@
         <!-- Far right Items -->
         <ul class="navbar-nav margin-left: auto!important;">
             <li>
-                <a class="nav-item nav-link" data-bs-toggle="modal" data-bs-target="#exampleModal"><i
-                        class="fa-solid fa-chart-pie"></i></a>
-
+                <a class="nav-item nav-link" id="Scoreboard" href="#scoreboardModal" data-bs-toggle="modal"
+                    aria-expanded="false"> <img src="/static/logos/Icons/Standings.png"></a>
             </li>
             <li>
                 <div class="dropdown">
@@ -61,10 +61,57 @@
                     <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="dropdownMenuButton">
                         <li><a class="dropdown-item" href="{{ url_for('logout') }}">Logout</a></li>
                     </ul>
+                </div>
             </li>
         </ul>
         {% endif %}
     </nav>
+
+    <!-- Daily Scoreboard Modal -->
+    <div class="modal fade" id="scoreboardModal" tabindex="-1">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+            <div class="modal-content">
+                <div class="modalTop">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="scoreboardModalTitle">Today's Blurgo Leaderboard</h5>
+                    </div>
+                </div>
+                <div class="modal-body">
+                    <table class="table scoreboard-table" id="scoreboardTable">
+                        <thead>
+                            <tr>
+                                <th scope="col">#</th>
+                                <th scope="col">Username</th>
+                                <th scope="col">Guesses</th>
+                                <th scope="col">Time Taken</th>
+                                <th scope="col">Score</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <!-- <tr>
+                                <th scope="row">1</th>
+                                <td>Mark</td>
+                                <td>Otto</td>
+                                <td>@mdo</td>
+                              </tr>
+                              <tr>
+                                <th scope="row">2</th>
+                                <td>Jacob</td>
+                                <td>Thornton</td>
+                                <td>@fat</td>
+                              </tr>
+                              <tr>
+                                <th scope="row">3</th>
+                                <td colspan="2">Larry the Bird</td>
+                                <td>@twitter</td>
+                              </tr> -->
+                            <!-- https://stackoverflow.com/questions/52919972/javascript-populate-table -->
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
 
     <!-- How To Play Modal -->
     <div class="modal fade" id="howtoplaymodal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
@@ -91,7 +138,6 @@
             </div>
         </div>
     </div>
-
     <hr>
     {% with messages = get_flashed_messages() %}
     {% if messages %}

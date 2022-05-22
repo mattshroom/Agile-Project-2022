@@ -85,6 +85,9 @@ document.getElementById("app").innerHTML = `
 function onTimesUp() {
   clearInterval(timerInterval);
   removeBlur();
+  document.getElementById("submitButton").disabled = true;
+  document.getElementById("submit").disabled = true;
+  document.getElementById("userGuess").disabled = true;
 }
 
 function calculateScore(guessNum, timeTaken) {
@@ -92,9 +95,7 @@ function calculateScore(guessNum, timeTaken) {
     var score = 0
   }
   else if (solved) {
-    console.log(timeTaken)
-    multiplier = (timeTaken * guessNum) / 6;
-    var score = baseScore - multiplier;
+    var score = baseScore - (5 / 12) * timeTaken - (50000 - (5 / guessNum) * 10000);
   }
   return Math.round(score);
 }
@@ -108,10 +109,14 @@ function startTimer() {
     setRemainingPathColor(timeLeft);
 
     // Solved before times up
-    if (solved === true) {
+    if (solved) {
       onTimesUp();
       score = calculateScore(guessCount, timePassed * 1000);
       console.log(score);
+      temp = 'You guessed it right!';
+      document.getElementById('exampleModalLabel').innerHTML = temp;
+      $('#exampleModal').modal('show');
+
     }
 
     // Times up
@@ -119,8 +124,14 @@ function startTimer() {
       onTimesUp();
       score = calculateScore(guessCount, timePassed * 1000);
       console.log(score)
+      temp = "Time's up!";
+      document.getElementById('exampleModalLabel').innerHTML = temp;
+      $('#exampleModal').modal('show');
     }
 
+    else if (!solved && guessCount >= 5) {
+
+    }
   }, 1000);
 }
 
@@ -202,8 +213,14 @@ function jsonImage() {
 
 
 function guessCompare() {
+
   if (solved) {
     console.log("You've already won!")
+
+  }
+
+  else if (document.getElementById('userGuess').value === '') {
+    alert("Empty Input");
 
   }
 
@@ -278,6 +295,7 @@ function guessCompare() {
           // console.log("Score:",score);
           console.log("Too many guesses, try again tomorrow!");
         }
+
         if (solved) {
           temp = 'You guessed it right!';
           document.getElementById('exampleModalLabel').innerHTML = temp;
@@ -290,9 +308,7 @@ function guessCompare() {
         }
       })
   }
-
 }
-
 
 var input = document.getElementById("userGuess");
 input.addEventListener("keypress", function (event) {

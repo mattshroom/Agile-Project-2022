@@ -255,6 +255,13 @@ a.register {
   font-size: larger;
 }
 
+.scoreboard-table {
+  background-color: #594F4F;
+  color: white;
+  font-family: "Segoe UI";
+  font-size: medium;
+}
+
 #info {
   background-color: transparent;
   border: none;

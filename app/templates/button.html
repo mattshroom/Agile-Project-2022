@@ -26,13 +26,7 @@
     </div>
 </div>
 
-<!-- Button trigger modal -->
-<!-- <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
-        Launch demo modal
-    </button> -->
-
 <!-- Modal -->
-
 <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
     <div class="modal-dialog">
         <div class="modal-content" id="results-modal">
@@ -64,11 +58,12 @@
 <div class="center">
     <input type="text" id="userGuess" class="guessBox" name="guess" placeholder="Guess Goes Here">
     <div class="buttonGuess">
-        <button id="submitButton" onclick="guessCompare()">Submit</button>
+        <button class="btn btn-lg btn-primary" id="submitButton" onclick="guessCompare()">Submit</button>
     </div>
     <button id="submit" type="submit" onclick="guessCompare()" onkeypress="guessCompare()" hidden>Submit</button>
 
 </div>
+<button id="submit" type="submit" onclick="guessCompare()" onkeypress="guessCompare()" hidden>Submit</button>
 
 <div id="superdiv">
 
