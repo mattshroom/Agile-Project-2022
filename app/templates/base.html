@@ -27,7 +27,7 @@
                                 <a class="nav-item nav-link" href="{{ url_for('index') }}" id ="Profile">Profile  <img src="/static/logos/Icons/ProfilePic.png"></a>
                             </li>
                             <li>
-                                <button type="button" class="nav-item nav-link" id="info" data-bs-toggle="modal" data-bs-target="#howtoplaymodal"><i class="fa-solid fa-circle-info"></i></button>
+                                <button type="button" class="nav-item nav-link" id="info" data-bs-toggle="modal" data-bs-target="#howtoplaymodal"><i class="fa-solid fa-circle-info"></i><img src="/static/logos/Icons/Info.png"></button>
                             </li>
                         </ul>
                         
@@ -58,14 +58,15 @@
         
         <!-- Daily Scoreboard Modal -->
         <div class="modal fade" id="scoreboardModal" tabindex="-1">
-            <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-dialog modal-dialog-centered modal-lg">
                 <div class="modal-content">
-
-                    <div class="modal-header">
-                        <h5 class="modal-title" id="scoreboardModalTitle">Today's Blurgo Leaderboard</h5>
+                    <div class="modalTop">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="scoreboardModalTitle">Today's Blurgo Leaderboard</h5>
+                        </div>
                     </div>
                     <div class="modal-body">
-                        <table class="table" id="scoreboardTable">
+                        <table class="table scoreboard-table" id="scoreboardTable">
                             <thead>
                               <tr>
                                 <th scope="col">#</th>
