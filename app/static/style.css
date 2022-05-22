@@ -103,8 +103,8 @@ input.guessBox {
 .correct,
 .incorrect {
   display: flex;
-  align-items: center;
-  justify-content: center;
+  /* align-items: center; 
+  justify-content: center;  */
   font-size: 36px;
 }
 
@@ -246,4 +246,13 @@ input.guessBox {
   transform: translate(-50%, -50%);
   top: 5%;
   left: 5%;
+}
+
+#superdiv{
+  text-align: center;
+  display: flex;
+  margin: 0 auto;
+  width: 10%;
+
+  flex-direction: column-reverse;
 }
