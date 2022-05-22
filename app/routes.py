@@ -23,11 +23,19 @@ def index():
     posts = [
         {
             'author':{'username':'Matt'},
-            'body':'Test Body'
+            'body':'Welcome to Blurgo!'
         },
         {
-            'author':{'username':'Matt'},
-            'body':'Test Body 2'
+            'author':{'username':'Nic'},
+            'body':'Try to guess the company logo as it unblurs!'
+        },
+        {
+            'author':{'username':'Cameron'},
+            'body':'There is a new Blurgo every day!'
+        },
+        {
+            'author':{'username':'Lachy'},
+            'body':'Compete with your friends to get the best score!'
         }
     ]
 

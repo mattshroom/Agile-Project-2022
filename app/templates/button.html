@@ -1,41 +1,44 @@
 {% extends "base.html" %}
 
 {% block content %}
-    
-    <!-- Ready Modal -->
-    <div class="modal hide fade readyModal" id="readyModal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1">
-        <div class="modal-dialog modal-dialog-centered">
-            <div class="modal-content">
 
-                <div class="modal-header">
-                    <h5 class="modal-title" id="label">Ready to Blurgo?</h5>
-                </div>
-                
-                <div class="modal-body">
-                    Click "Start!" when you are ready to play.
-                </div>
-                
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" onclick="location.href = '/index'">I'm not ready, take me back!</button>
-                    <button type="button" class="btn btn-primary" data-bs-dismiss="modal" onclick="jsonImage(), unblurStart()">Start!</button>
-                </div>
+<!-- Ready Modal -->
+<div class="modal hide fade readyModal" id="readyModal" data-bs-backdrop="static" data-bs-keyboard="false"
+    tabindex="-1">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+
+            <div class="modal-header">
+                <h5 class="modal-title" id="label">Ready to Blurgo?</h5>
+            </div>
+
+            <div class="modal-body">
+                Click "Start!" when you are ready to play.
+            </div>
+
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" onclick="location.href = '/index'">I'm not ready, take
+                    me back!</button>
+                <button type="button" class="btn btn-primary" data-bs-dismiss="modal"
+                    onclick="jsonImage(), unblurStart()">Start!</button>
             </div>
         </div>
     </div>
+</div>
 
-        <!-- Button trigger modal -->
-    <!-- <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+<!-- Button trigger modal -->
+<!-- <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
         Launch demo modal
     </button> -->
-    
-    <!-- Modal -->
-    
-    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-        <div class="modal-dialog">
+
+<!-- Modal -->
+
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
         <div class="modal-content" id="results-modal">
             <div class="modal-header">
-            <h5 class="modal-title" id="exampleModalLabel">Statistics</h5>
-            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                <h5 class="modal-title" id="exampleModalLabel">Statistics</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <div class="modal-body">
                 <h6>Results</h6>
@@ -45,32 +48,33 @@
                 <div>Score</div>
             </div>
             <div class="modal-footer">
-            <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Close</button>
 
             </div>
         </div>
-        </div>
     </div>
+</div>
 
-    <div class="center">
-        <img id="imgID" class="startingBlur" draggable="false" src="" height="300px" width="300px" oncontextmenu="return false;"></img>
-        <p id="demo"></p>
-    </div>
+<div class="center">
+    <img id="imgID" class="startingBlur" draggable="false" src="" height="300px" width="300px"
+        oncontextmenu="return false;"></img>
+    <p id="demo"></p>
+</div>
 
-    <div class="center"> 
-        <input type="text" id="userGuess" class="guessBox" name="guess" placeholder="Guess Goes Here">
-        <div class= "buttonGuess">
-            <button id="submitButton" onclick="guessCompare()">Submit</button>
-        </div>
-        <button id="submit" type="submit" onclick="guessCompare()" onkeypress="guessCompare()" hidden>Submit</button>
-        
+<div class="center">
+    <input type="text" id="userGuess" class="guessBox" name="guess" placeholder="Guess Goes Here">
+    <div class="buttonGuess">
+        <button id="submitButton" onclick="guessCompare()">Submit</button>
     </div>
+    <button id="submit" type="submit" onclick="guessCompare()" onkeypress="guessCompare()" hidden>Submit</button>
 
-    <div id="superdiv">
+</div>
 
-    </div>
-    <div id="app">
-    
-    </div>
-    <script src="{{ url_for('static', filename='blur.js') }}"></script>
-    {% endblock %}
+<div id="superdiv">
+
+</div>
+<div id="app">
+
+</div>
+<script src="{{ url_for('static', filename='blur.js') }}"></script>
+{% endblock %}
