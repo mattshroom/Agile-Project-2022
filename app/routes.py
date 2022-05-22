@@ -35,6 +35,10 @@ def index():
         {
             'author':{'username':'Lachy'},
             'body':'Compete with your friends to get the best score!'
+        },
+        {
+            'author':{'username':'Matt'},
+            'body':'Click on the "Blurgo" at the top to play!'
         }
     ]
 

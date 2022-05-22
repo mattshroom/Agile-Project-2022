@@ -27,6 +27,13 @@ body {
   text-align: center;
 }
 
+div.timer {
+  text-align: center;
+  margin: 1em;
+  color: white;
+  font-family: "Segoe UI";
+  font-size: xx-large;
+}
 
 /* Modify the navbar style */
 #navbar-custom {
@@ -65,7 +72,15 @@ body {
   font-family: Bodoni MT;
   font-size: 60px;
   font-weight: 900;
+  padding-left: 17.5%;
+}
 
+#Blurgo:hover,
+#profile:hover,
+#info:hover,
+#Scoreboard:hover,
+#dropdownMenuButton:hover {
+  opacity: 0.5;
 }
 
 #navLinks {
@@ -88,8 +103,8 @@ input.guessBox {
 .correct,
 .incorrect {
   display: flex;
-  align-items: center;
-  justify-content: center;
+  /* align-items: center; 
+  justify-content: center;  */
   font-size: 36px;
 }
 
@@ -163,7 +178,6 @@ input.guessBox {
   right: 16px;
   font-size: 16px;
 
-
 }
 
 .modal.readyModal {
@@ -181,59 +195,8 @@ input.guessBox {
   text-align: center;
 }
 
-html {
-  background-color: #594F4F;
-}
-
 .blurgo {
   color: #E5FCC2;
-  text-align: left;
-}
-
-.title {
-  text-align: center;
-}
-
-.message {
-  color: red;
-  text-align: center;
-}
-
-.buttons {
-  display: inline-block;
-}
-
-.loginpage {
-  padding-top: 100px;
-  text-align: center;
-  color: white;
-}
-
-a.register {
-  color: #E5FCC2;
-}
-
-.therest {
-  background-color: #594F4F;
-}
-
-.registration {
-  text-align: center;
-  color: white;
-}
-
-.extrabutton {
-  text-align: center;
-  color: white;
-}
-
-.hello {
-  text-align: center;
-  color: white;
-}
-
-.modal {
-  color: black;
   text-align: left;
 }
 
@@ -253,6 +216,7 @@ a.register {
   color: white;
   font-family: "Segoe UI";
   font-size: larger;
+  text-align: left;
 }
 
 .scoreboard-table {
@@ -270,3 +234,28 @@ a.register {
 /* #results{
     display: none;
 } */
+.profilePage,
+.registrationPage,
+.loginPage {
+  position: absolute;
+  transform: translate(-50%, -50%);
+  top: 40%;
+  left: 50%;
+}
+
+#registerButton {
+  position: absolute;
+  position: absolute;
+  transform: translate(-50%, -50%);
+  top: 5%;
+  left: 5%;
+}
+
+#superdiv{
+  text-align: center;
+  display: flex;
+  margin: 0 auto;
+  width: 10%;
+
+  flex-direction: column-reverse;
+}
