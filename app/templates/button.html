@@ -11,7 +11,38 @@
             <div class="modal-header">
                 <h5 class="modal-title" id="label">Ready to Blurgo?</h5>
             </div>
+            <div class="modal-body">
+                Time until next Blurgo:
+                <div class="timer" id="nextDayTimer">
+                    <script>
+                        // Get the current time, then compare it against midnight
+                        var date = new Date();
+                        var second = date.getSeconds();
+                        var minute = date.getMinutes();
+                        var hour = date.getHours();
+                        var day = date.getDay();
+                        var month = date.getMonth();
+                        var year = date.getFullYear();
 
+                        var leftHour = 23 - hour;
+                        var leftMinute = 59 - minute;
+                        var leftSeconds = 59 - second;
+
+                        var leftTime = (leftHour * 3600) + (leftMinute * 60) + leftSeconds;
+                        var timer = document.getElementById('nextDayTimer');
+                        // Update timer every 1000ms (1s)
+                        setInterval(updateTimer, 1000);
+
+                        function updateTimer() {
+                            var h = Math.floor(leftTime / 3600);
+                            var m = Math.floor((leftTime - (h * 3600)) / 60);
+                            var s = Math.floor(leftTime % 60);
+                            timer.innerHTML =  h + " : " + m + " : " + s;
+                            leftTime--;
+                        }
+                    </script>
+                </div>
+            </div>
             <div class="modal-body">
                 Click "Start!" when you are ready to play.
             </div>
