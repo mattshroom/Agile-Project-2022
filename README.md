@@ -63,9 +63,25 @@ $ python3 -m unittest -v tests/unittest.py
 ```
 
 ## 5. Include commit logs, showing contributions and review from both contributing students
-    
-Commit logs can be found in 
+  
+Commit logs can be found under the git commit file.
 
-## 6. Authors
+## 6. Resources Used
+
+A big thank you to the following resources used in the production of this web-app:
+
+- [Figma](https://www.figma.com/file/tn4Bsz7LHcRCxrgEauJxAj/Blurgo-Figma-Board?node-id=0%3A1)
+
+- [Github](https://github.com/mattshroom/Agile-Project-2022)
+
+- [The Flask Mega-Tutorial](https://blog.miguelgrinberg.com/post/the-flask-mega-tutorial-part-i-hello-world)
+
+- [Github PR Template](https://embeddedartistry.com/blog/2017/08/04/a-github-pull-request-template-for-your-projects/)
+
+- [CSS Tricks](https://css-tricks.com/)
+
+- [Codesource](https://codesource.io/building-a-restful-crud-api-with-flask/)
+ 
+## 7. Authors
 
 Matthaeus Ong, Cameron Nguyen, Lachlan Bassi, Nicholas Chua
