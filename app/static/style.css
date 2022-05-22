@@ -36,8 +36,8 @@ img.blur{
     text-align: center;
 }
 img {
-    height: 1em;
-    width: auto;
+    /* height: 1em;
+    width: auto; */
     display: inline-block;
     }
 .nav-item.nav-link{
