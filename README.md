@@ -2,7 +2,7 @@
 
 ## 1. Purpose
 
-Blurgo at its core is a memory game. The aim is to guess the "logo of the day" with a blur filter applied. The filter will slowly reduce over a 2 minute time frame. The player's score is calculated based on the time taken and the number of attempted guesses. A new random logo is released every day, and players can compare their scores in the results table.
+Blurgo at its core is a memory game. The aim is to guess the "logo of the day" with a blur filter applied. The filter will slowly reduce over a 2 minute time frame. The player's score is calculated based on the time taken and the number of attempted guesses. A new random logo is released every day, and players can compare their scores in the scoreboard table.
 
 Memory-based games are a fun method of exercising the mind, being known to improve brain functions such as memory-recollection, concentration, and focus.
 
