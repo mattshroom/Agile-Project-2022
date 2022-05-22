@@ -213,9 +213,15 @@ function jsonImage() {
 
 
 function guessCompare() {
+    
     if(solved){
         console.log("You've already won!")
         
+    }
+
+    else if(document.getElementById('userGuess').value === ''){
+      alert("Empty Input");
+      
     }
 
     else if(!solved && guessCount < 6){
@@ -298,6 +304,7 @@ function guessCompare() {
               }
           })
         }
+        document.getElementById('userGuess').value = '';
 
 }
 
