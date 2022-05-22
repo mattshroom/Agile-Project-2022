@@ -1,121 +1,121 @@
 {
     "logos": [
         {
-            "name":"shell",
+            "name": "shell",
             "logo_id": "1",
             "logo_link": "https://www.jetpunk.com/img/user-photo-library/38/38a12fe9c0-450.png",
             "logo_file": "./logos/shell.png"
         },
         {
-            "name":"adidas",
+            "name": "adidas",
             "logo_id": "2",
             "logo_link": "https://www.jetpunk.com/img/user-photo-library/33/3397b1bbca-450.png",
             "logo_file": "./logos/adidas.png"
         },
         {
-            "name":"amazon",
+            "name": "amazon",
             "logo_id": "3",
             "logo_link": "https://www.jetpunk.com/img/user-photo-library/0d/0dd7732864-450.png",
             "logo_file": "./logos/amazon.png"
         },
         {
-            "name":"apple",
+            "name": "apple",
             "logo_id": "4",
             "logo_link": "https://www.jetpunk.com/img/user-photo-library/79/79250fb3b1-450.png",
             "logo_file": "./logos/apple.png"
         },
         {
-            "name":"encyclopedia",
+            "name": "encyclopedia",
             "logo_id": "5",
             "logo_link": "https://www.jetpunk.com/img/user-photo-library/5d/5d1022b4b4-450.png",
             "logo_file": "./logos/ency.png"
         },
         {
-            "name":"gucci",
+            "name": "gucci",
             "logo_id": "6",
             "logo_link": "https://www.jetpunk.com/img/user-photo-library/3c/3c3b4e5fd4-450.png",
             "logo_file": "./logos/gucci.png"
         },
         {
-            "name":"KFC",
+            "name": "KFC",
             "logo_id": "7",
             "logo_link": "https://www.jetpunk.com/img/user-photo-library/12/12bcf4ad80-450.png",
             "logo_file": "./logos/KFC.png"
         },
         {
-            "name":"LG",
+            "name": "LG",
             "logo_id": "8",
             "logo_link": "https://www.jetpunk.com/img/user-photo-library/b7/b7f99c36f3-450.png",
             "logo_file": "./logos/LG.png"
         },
         {
-            "name":"microsoft",
+            "name": "microsoft",
             "logo_id": "9",
             "logo_link": "https://www.jetpunk.com/img/user-photo-library/11/11c388907e-450.png",
             "logo_file": "./logos/microsoft.png"
         },
         {
-            "name":"monster",
+            "name": "monster",
             "logo_id": "10",
             "logo_link": "https://www.jetpunk.com/img/user-photo-library/12/1287b28f04-450.jpg",
             "logo_file": "./logos/monster.jpg"
         },
         {
-            "name":"nestle",
+            "name": "nestle",
             "logo_id": "11",
             "logo_link": "https://www.jetpunk.com/img/user-photo-library/91/91f9494c4b-450.png",
             "logo_file": "./logos/nestle.png"
         },
         {
-            "name":"pepsi",
+            "name": "pepsi",
             "logo_id": "12",
             "logo_link": "https://www.jetpunk.com/img/user-photo-library/4e/4e31c56cb4-450.png",
             "logo_file": "./logos/pepsi.png"
         },
         {
-            "name":"playboy",
+            "name": "playboy",
             "logo_id": "13",
             "logo_link": "https://www.jetpunk.com/img/user-photo-library/ba/bae213ad7d-450.png",
             "logo_file": "./logos/playboy.png"
         },
         {
-            "name":"playstation",
+            "name": "playstation",
             "logo_id": "14",
             "logo_link": "https://www.jetpunk.com/img/user-photo-library/42/42711cbcde-450.png",
             "logo_file": "./logos/playstation.png"
         },
         {
-            "name":"pringles",
+            "name": "pringles",
             "logo_id": "15",
             "logo_link": "https://www.jetpunk.com/img/user-photo-library/20/20b289e5ff-450.png",
             "logo_file": "./logos/pringles.png"
         },
         {
-            "name":"skoda",
+            "name": "skoda",
             "logo_id": "16",
             "logo_link": "https://www.jetpunk.com/img/user-photo-library/68/687e2dd4cc-450.png",
             "logo_file": "./logos/skoda.png"
         },
         {
-            "name":"tacobell",
+            "name": "tacobell",
             "logo_id": "17",
             "logo_link": "https://www.jetpunk.com/img/user-photo-library/e1/e1ff4f276a-450.png",
             "logo_file": "./logos/tacobell.png"
         },
         {
-            "name":"target",
+            "name": "target",
             "logo_id": "18",
             "logo_link": "https://www.jetpunk.com/img/user-photo-library/9c/9c1d64d570-450.png",
             "logo_file": "./logos/target.png"
         },
         {
-            "name":"toyota",
+            "name": "toyota",
             "logo_id": "19",
             "logo_link": "https://www.jetpunk.com/img/user-photo-library/c2/c2e8cf9192-450.png",
             "logo_file": "./logos/toyota.png"
         },
         {
-            "name":"wendys",
+            "name": "wendys",
             "logo_id": "20",
             "logo_link": "https://www.jetpunk.com/img/user-photo-library/ea/ea75dc93ef-450.png",
             "logo_file": "./logos/wendys.png"

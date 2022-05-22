@@ -1,111 +1,168 @@
 <!doctype html>
 <html>
-    <head>
-        <!-- Bootstrap before all other styling -->
-        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-        <link href="../static/style.css" rel="stylesheet">
 
-        <link href="https://cdn.jsdelivr.net/npm/shareon@2/dist/shareon.min.css" rel="stylesheet">
-        <script src="https://cdn.jsdelivr.net/npm/shareon@2/dist/shareon.iife.js" defer init></script>
+<head>
+    <!-- Bootstrap before all other styling -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <link href="../static/style.css" rel="stylesheet">
 
-        {% if title %}
-        <title>{{ title }} - Blurgo</title>
-        {% else %}
-        <title>Welcome to Blurgo</title>
-        {% endif %}
-    </head>
-    <body>
-        <nav class="navbar navbar-expand-sm" id="navbar-custom">
-            <!-- <div class="collapse navbar-collapse" id="navbarNavAltMarkup"> -->
-                <!-- <div class="navbar-nav"> -->
-                        {% if current_user.is_authenticated %}
-                        <!-- <First Item> -->
-                        <ul class="navbar-nav">
-                           <li>
-                                <a class="nav-item nav-link" href="{{ url_for('index') }}" id ="Profile">Profile  <img src="/static/logos/Icons/ProfilePic.png"></a>
-                            </li>
-                            <li>
-                                <button type="button" class="nav-item nav-link" id="info" data-bs-toggle="modal" data-bs-target="#howtoplaymodal"><i class="fa-solid fa-circle-info"></i><img src="/static/logos/Icons/Info.png"></button>
-                            </li>
-                        </ul>
-                        
-                        <ul class="navbar-nav mx-auto">
-                            <li>
-                                <a class="nav-item nav-link" href="{{ url_for('button') }}"id="Blurgo">Blurgo</a>  
-                            </li>
-                        </ul>
-                        <!-- Far right Items -->
-                        <ul class="navbar-nav margin-left: auto!important;">
-                            <li>
-                                <a class="nav-item nav-link" data-bs-toggle="modal" data-bs-target="#exampleModal"><i class="fa-solid fa-chart-pie"></i></a>  
+    <link href="https://cdn.jsdelivr.net/npm/shareon@2/dist/shareon.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/shareon@2/dist/shareon.iife.js" defer init></script>
 
-                            </li>
-                            <li>
-                            <div class="dropdown" >
-                                <!-- <ul class="navbar-nav ms-auto nav-item dropdown"> -->
-                                <!-- <li> -->
-                                <button class="btn dropdown-toggle" type="button" id="dropdownMenuButton" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                    <img src="/static/logos/Icons/Settings.png">
-                                </button>
-                                <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="dropdownMenuButton">
-                                    <li><a class="dropdown-item" href="{{ url_for('logout') }}">Logout</a></li>
-                                </ul>
-                            </li>
-                        </ul>
-                        {% endif %}
-        </nav> 
+    {% if title %}
+    <title>{{ title }} - Blurgo</title>
+    {% else %}
+    <title>Welcome to Blurgo</title>
+    {% endif %}
+</head>
 
-        <!-- How To Play Modal -->
-        <div class="modal fade" id="howtoplaymodal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-            <div class="modal-dialog modal-dialog-centered modal-lg">
-                <!-- content -->
-                <div class="modal-content">
-                    <div class="modalTop">
-                        <div class="modal-header">
-                            <h5 class="modal-title">How to Play!</h5>
-                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                        </div>
-                    </div>
-                    <div class="modal-body">
-                        <div class="howToPlayBody">
-                    <ul>
-                        <li>Speed is key!</li>
-                        <li>Guess the Blurgo within 5 tries.</li>
-                        <li>The logo will be unblurred slowly over time, up to a maximum of 5 minutes.</li>
-                        <li>It will also unblur slightly every time you guess incorrectly.</li>
-                        <li>A new Blurgo will be available each day!</li>
+<body>
+    <nav class="navbar navbar-expand-sm" id="navbar-custom">
+        <!-- <div class="collapse navbar-collapse" id="navbarNavAltMarkup"> -->
+        <!-- <div class="navbar-nav"> -->
+        {% if current_user.is_authenticated %}
+        <!-- <First Item> -->
+        <ul class="navbar-nav">
+            <li>
+                <a class="nav-item nav-link" href="{{ url_for('index') }}" id="Profile">Profile <img
+                        src="/static/logos/Icons/ProfilePic.png"></a>
+            </li>
+            <li>
+                <button type="button" class="nav-item nav-link" id="info" data-bs-toggle="modal"
+                    data-bs-target="#howtoplaymodal"><i class="fa-solid fa-circle-info"></i><img
+                        src="/static/logos/Icons/Info.png"></button>
+            </li>
+        </ul>
+
+        <ul class="navbar-nav mx-auto">
+            <li>
+                <a class="nav-item nav-link" href="{{ url_for('button') }}" id="Blurgo">Blurgo</a>
+            </li>
+        </ul>
+        <!-- Far right Items -->
+        <ul class="navbar-nav margin-left: auto!important;">
+            <li>
+                <a class="nav-item nav-link" id="Scoreboard" href="#scoreboardModal" data-bs-toggle="modal"
+                    aria-expanded="false"> <img src="/static/logos/Icons/Standings.png"></a>
+            </li>
+            <li>
+                <div class="dropdown">
+                    <!-- <ul class="navbar-nav ms-auto nav-item dropdown"> -->
+                    <!-- <li> -->
+                    <button class="btn dropdown-toggle" type="button" id="dropdownMenuButton" data-bs-toggle="dropdown"
+                        aria-haspopup="true" aria-expanded="false">
+                        <img src="/static/logos/Icons/Settings.png">
+                    </button>
+                    <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="dropdownMenuButton">
+                        <li><a class="dropdown-item" href="{{ url_for('logout') }}">Logout</a></li>
                     </ul>
                 </div>
-                </div>
-                </div>
-            </div>
-        </div>
-
-        <hr>
-        {% with messages = get_flashed_messages() %}
-        {% if messages %}
-        <ul>
-            {% for message in messages %}
-            <li>{{ message }}</li>
-            {% endfor %}
+            </li>
         </ul>
         {% endif %}
-        {% endwith %}
-        {% block content %}{% endblock %}
+    </nav>
 
-
-        <br>
-        <div class="footer">
-            <div class="shareon">
-                <a class="facebook"></a>
-                <a class="linkedin"></a>
-                <a class="reddit"></a>
-                <a class="telegram"></a>
-                <a class="twitter"></a>
-                <a class="whatsapp"></a>
+    <!-- Daily Scoreboard Modal -->
+    <div class="modal fade" id="scoreboardModal" tabindex="-1">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+            <div class="modal-content">
+                <div class="modalTop">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="scoreboardModalTitle">Today's Blurgo Leaderboard</h5>
+                    </div>
+                </div>
+                <div class="modal-body">
+                    <table class="table scoreboard-table" id="scoreboardTable">
+                        <thead>
+                            <tr>
+                                <th scope="col">#</th>
+                                <th scope="col">Username</th>
+                                <th scope="col">Guesses</th>
+                                <th scope="col">Time Taken</th>
+                                <th scope="col">Score</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <!-- <tr>
+                                <th scope="row">1</th>
+                                <td>Mark</td>
+                                <td>Otto</td>
+                                <td>@mdo</td>
+                              </tr>
+                              <tr>
+                                <th scope="row">2</th>
+                                <td>Jacob</td>
+                                <td>Thornton</td>
+                                <td>@fat</td>
+                              </tr>
+                              <tr>
+                                <th scope="row">3</th>
+                                <td colspan="2">Larry the Bird</td>
+                                <td>@twitter</td>
+                              </tr> -->
+                            <!-- https://stackoverflow.com/questions/52919972/javascript-populate-table -->
+                        </tbody>
+                    </table>
+                </div>
             </div>
         </div>
-    </body>
+    </div>
+
+    <!-- How To Play Modal -->
+    <div class="modal fade" id="howtoplaymodal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+            <!-- content -->
+            <div class="modal-content">
+                <div class="modalTop">
+                    <div class="modal-header">
+                        <h5 class="modal-title">How to Play!</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                </div>
+                <div class="modal-body">
+                    <div class="howToPlayBody">
+                        <ul>
+                            <li>Speed is key!</li>
+                            <li>Guess the Blurgo within 5 tries.</li>
+                            <li>The logo will be unblurred slowly over time, up to a maximum of 5 minutes.</li>
+                            <li>It will also unblur slightly every time you guess incorrectly.</li>
+                            <li>A new Blurgo will be available each day!</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <hr>
+    {% with messages = get_flashed_messages() %}
+    {% if messages %}
+    <ul>
+        {% for message in messages %}
+        <li>{{ message }}</li>
+        {% endfor %}
+    </ul>
+    {% endif %}
+    {% endwith %}
+    {% block content %}{% endblock %}
+
+
+    <br>
+    <div class="footer">
+        Created by: Matt, Cam, Nic and Lachy
+        <div class="shareon">
+            <a class="facebook"></a>
+            <a class="linkedin"></a>
+            <a class="reddit"></a>
+            <a class="telegram"></a>
+            <a class="twitter"></a>
+            <a class="whatsapp"></a>
+        </div>
+    </div>
+</body>
+
 </html>
