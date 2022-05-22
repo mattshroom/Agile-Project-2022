@@ -2,15 +2,15 @@
 
 ## 1. Purpose
 
-Blurgo at its core is a memory game. The aim is to guess the logo of the day that has a blur filter applied. The filter will slowly reduce over a 2 minute time frame. The player's score is calculated based on the time taken and the number of incorrect guesses.
+Blurgo at its core is a memory game. The aim is to guess the "logo of the day" that has a blur filter applied. The filter will slowly reduce over a 2 minute time frame. The player's score is calculated based on the time taken and the number of attempted guesses.
 
-Memory based games are a fun method of exercising the mind, being known to improve brain functions such as attention, concentration, and focus.
+Memory-based games are a fun method of exercising the mind, being known to improve brain functions such as memory-recollection, concentration, and focus.
 
-The other aspect of this game is to challenge the way we identify patterns in the recognition of brands. Many brands market themselves aggressively in every aspect of our lives, and the patterns of the most easily recognisable brands can be learnt from the results generated from the app. This data could potentially be used in machine learning applications to identify common themes amongst the most recognisable brands, traits identifiable even when obfuscated by a blurring filter.
+The other aspect of this game is to challenge the way we identify patterns in the recognition of brands. Many brands market themselves profusely in every aspect of our lives, and the patterns of the most easily recognisable brands can be learnt from the results generated from the app. This data could potentially be used in machine learning applications to identify common themes amongst the most recognisable brands, traits identifiable even when obfuscated by a blurring filter.
 
 ## 2. Architecture
 
-This web application was built with HTML, CSS, Javascript and Python (Flask). The dependencies can be found in ***requirements.txt***. It uses Flask modules such as Flask-login and Flask-SQLAlchemy to manage the user database and WTForms to validate the login/sign-up pages.
+This web application was built with HTML, CSS (with styling primarily built upon Bootstrap functionalities), Javascript and Python (Flask). The dependencies can be found in ***requirements.txt***. It uses Flask modules such as Flask-login and Flask-SQLAlchemy to manage the user database and WTForms to validate the login/sign-up pages.
 
 ## 3. Installation / How To Launch
 
