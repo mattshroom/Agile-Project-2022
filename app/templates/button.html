@@ -23,6 +23,35 @@
         </div>
     </div>
 
+        <!-- Button trigger modal -->
+    <!-- <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+        Launch demo modal
+    </button> -->
+    
+    <!-- Modal -->
+    
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+        <div class="modal-content" id="results-modal">
+            <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">Statistics</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <h6>Results</h6>
+                <div>Win %</div>
+                <div>Guesses</div>
+                <div>Time</div>
+                <div>Score</div>
+            </div>
+            <div class="modal-footer">
+            <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Close</button>
+
+            </div>
+        </div>
+        </div>
+    </div>
+
     <div class="center">
         <img id="imgID" class="startingBlur" draggable="false" src="" height="300px" width="300px" oncontextmenu="return false;"></img>
         <p id="demo"></p>
@@ -31,7 +60,7 @@
     <div class="center"> 
         <input type="text" id="userGuess" class="guessBox" name="guess" placeholder="Guess Goes Here">
         <div class= "buttonGuess">
-        <button  onclick="guessCompare()">Submit</button>
+            <button id="submitButton" onclick="guessCompare()">Submit</button>
         </div>
         <button id="submit" type="submit" onclick="guessCompare()" onkeypress="guessCompare()" hidden>Submit</button>
         

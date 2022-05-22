@@ -9,6 +9,10 @@ img.startingBlur {
 .unBlur{  
     transition: filter 120s ease-out; 
 }
+.unBlurQuick{
+    filter: blur(0px);
+    transition: filter 3s;
+}
 
 img.blur{
     filter: blur(60px)
@@ -30,10 +34,12 @@ img.blur{
     line-height: 20px;
     letter-spacing: 0em;
     text-align: center;
-    padding-top: 14px;
-    padding-bottom: 10px;
 }
-
+img {
+    height: 1em;
+    width: auto;
+    display: inline-block;
+    }
 .nav-item.nav-link{
     color: #E5FCC2;
     font-family: Bodoni MT;
@@ -174,7 +180,7 @@ html{
 }
 
 body {
-    color:white;
+    /* color:white; */
     background-color:#594F4F;
     text-align: center;
   }
@@ -218,4 +224,9 @@ a.register{
 .hello{
   text-align: center;
   color: white;
+}
+
+#results-modal{
+  height: 800px;
+ 
 }
