@@ -1,13 +1,13 @@
 {% extends "base.html" %}
-
 {% block content %}
-<h1>Hi, {{ current_user.username }}!</h1>
+<div class="profilePage">
+    <h1>Hi, {{ current_user.username }}!</h1>
 
-<br>
-{% for post in posts %}
-<div>
-    <p><b>{{ post.body }}</b></p>
+    <br>
+    {% for post in posts %}
+    <div>
+        <p><b>{{ post.body }}</b></p>
+    </div>
+    {% endfor %}
 </div>
-{% endfor %}
-
 {% endblock %}
