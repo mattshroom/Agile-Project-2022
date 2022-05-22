@@ -226,7 +226,29 @@ a.register{
   color: white;
 }
 
-#results-modal{
-  height: 800px;
- 
+.modal{
+  color: black;
+  text-align: left;
+}
+
+@font-face{
+  font-family: "Segoe UI";
+  src: url("../static/fonts/segoe-ui-4-cufonfonts/Segoe UI.ttf");
+}
+
+.modalTop{
+  background-color: #547980;
+  color: white;
+  font-size: x-large;
+}
+.modal-body{
+  background-color: #594F4F;
+  color: white;
+  font-family: "Segoe UI";
+  font-size: larger;
+}
+
+#info{
+  background-color: transparent;
+  border: none;
 }

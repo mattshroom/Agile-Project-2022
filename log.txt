@@ -1,0 +1,184 @@
+* 	9721dcf	Matt Ong	Sun May 22 16:58:10 2022 +0800	README essentially completed
+*   	426fc92	Matt Ong	Sun May 22 16:24:23 2022 +0800	Merge remote-tracking branch 'origin/main' into 51-unit-testing
+|\  
+| * 	4fbb11c	Nicholas Chua	Sun May 22 16:22:49 2022 +0800	how to play modal complete (#50)
+* | 	9722d75	Matt Ong	Sun May 22 16:23:50 2022 +0800	unit test started
+* | 	7b7d038	Matt Ong	Sun May 22 16:23:10 2022 +0800	updating readme with more details
+|/  
+| *   	b834c0c	mattshroom	Sun May 22 16:21:33 2022 +0800	Merge branch 'main' into 39-create-how-to-play-modal
+| |\  
+| |/  
+|/|   
+| * 	70d7453	nic-chua	Sat May 21 19:43:09 2022 +0800	how to play modal complete
+| | * 	09b2f29	Matt Ong	Sun May 22 11:37:01 2022 +0800	latest working scoreboard modal, need link to db
+| |/  
+|/|   
+* | 	4155d0c	camtheboom	Sat May 21 19:29:23 2022 +0800	modal created (#48)
+| | * 	ff0d243	Lachlan Bassi	Sun May 22 11:30:05 2022 +0800	To be deleteted
+| | *   	79cc6e2	Lachlan Bassi	Sat May 21 18:35:32 2022 +0800	Merge branch 'main' of https://github.com/mattshroom/Agile-Project-2022
+| | |\  
+| | | | *   	2c6424f	mattshroom	Sat May 21 19:29:13 2022 +0800	Merge branch 'main' into 33-results-modal
+| | | | |\  
+| |_|_|_|/  
+|/| | | |   
+* | | | | 	ca36c56	LKBEAST	Sat May 21 19:22:53 2022 +0800	Localised icons (#47)
+| | | | *   	e3485b1	cameron	Sat May 21 19:20:17 2022 +0800	Merge remote-tracking branch 'origin/main' into 33-results-modal
+| | | | |\  
+| |_|_|_|/  
+|/| | | |   
+| | | | * 	63cdb76	cameron	Sat May 21 19:02:35 2022 +0800	modal created
+| | | |/  
+| | | | *   	fbd396b	LKBEAST	Sat May 21 18:53:39 2022 +0800	Merge branch 'main' into LocalisedIcons
+| | | | |\  
+| |_|_|_|/  
+|/| | | |   
+* | | | |   	97c0598	camtheboom	Sat May 21 18:47:11 2022 +0800	Merge pull request #46 from mattshroom/20-basic-scoring-system
+|\ \ \ \ \  
+| |_|_|/ /  
+|/| | | |   
+| * | | | 	83ac35e	Matt Ong	Sat May 21 18:40:04 2022 +0800	pseudo RNG seeded based on date
+| * | | | 	f4b48c8	Matt Ong	Sat May 21 16:23:12 2022 +0800	scoring system works, stored in "score"
+|/ / / /  
+* / / / 	4c3ddf4	camtheboom	Sat May 21 13:05:07 2022 +0800	36 styling the main page (#45)
+|/ / /  
+* | |   	3f1d70c	camtheboom	Thu May 19 23:39:43 2022 +0800	Merge pull request #44 from mattshroom/43-fixing-issue-23
+|\ \ \  
+| * | | 	fd87858	nic-chua	Thu May 19 23:30:47 2022 +0800	b43
+|/ / /  
+| | * 	2589763	Lachlan Bassi	Sat May 21 18:29:24 2022 +0800	Updated the header, downloaded the icons
+| |/  
+| * 	0b99164	Lachlan Bassi	Thu May 19 23:33:11 2022 +0800	put the icons local
+|/  
+* 	fa798a9	Matt Ong	Thu May 19 12:00:46 2022 +0800	attempt at game logic
+* 	abbd59d	Matt Ong	Thu May 19 12:00:19 2022 +0800	commented out body for styling purposes
+* 	16e2d75	Matt Ong	Thu May 19 11:59:58 2022 +0800	remove old logos
+*   	8994b04	mattshroom	Thu May 19 11:42:57 2022 +0800	Merge pull request #35 from mattshroom/24-front-end-for-ready-page
+|\  
+| *   	0596887	mattshroom	Thu May 19 11:42:24 2022 +0800	Merge branch 'main' into 24-front-end-for-ready-page
+| |\  
+| |/  
+|/|   
+* |   	15ee0f1	camtheboom	Wed May 18 23:41:39 2022 +0800	Merge pull request #34 from mattshroom/6-front-end-for-navbar-header
+|\ \  
+| * \   	4c34f2f	camtheboom	Wed May 18 23:41:16 2022 +0800	Merge branch 'main' into 6-front-end-for-navbar-header
+| |\ \  
+| |/ /  
+|/| |   
+| * | 	749470e	Lachlan Bassi	Wed May 18 23:35:46 2022 +0800	Hey guys finished the navbar all by myself
+| | * 	c645e1c	Matt Ong	Thu May 19 11:36:15 2022 +0800	slight styling changes for modal
+| | * 	9f99bc1	Matt Ong	Thu May 19 11:19:59 2022 +0800	ready modal works on load of main page
+| |/  
+|/|   
+* |   	5ca8054	camtheboom	Wed May 18 15:42:28 2022 +0800	Merge pull request #31 from mattshroom/29-make-main-page
+|\ \  
+| * | 	19058f1	mattshroom	Wed May 18 15:40:25 2022 +0800	Update config.py
+| * | 	c539194	mattshroom	Wed May 18 15:37:45 2022 +0800	Delete javatest.js
+| * | 	5cd267f	mattshroom	Wed May 18 15:37:36 2022 +0800	Delete settings.json
+| * |   	303dc38	mattshroom	Wed May 18 15:35:44 2022 +0800	Merge branch 'main' into 29-make-main-page
+| |\ \  
+| |/ /  
+|/| |   
+* | |   	0ea1c3d	camtheboom	Tue May 17 17:26:32 2022 +0800	Merge pull request #30 from mattshroom/27-social-media-sharing-buttons
+|\ \ \  
+| * | | 	12245c0	Matt Ong	Tue May 17 17:19:16 2022 +0800	Sharing functionality ok, needs work for info pass
+|/ / /  
+| * | 	ff8479b	camtheboom	Wed May 18 15:32:13 2022 +0800	changed timers to 2 mins
+| * | 	da95caf	camtheboom	Tue May 17 23:30:32 2022 +0800	Functional main page
+|/ /  
+* |   	018aecf	mattshroom	Mon May 16 20:46:42 2022 +0800	Merge pull request #28 from mattshroom/19-db-for-logos-and-get-requests-for-website
+|\ \  
+| |/  
+|/|   
+| *   	12b7e59	mattshroom	Mon May 16 20:45:56 2022 +0800	Merge branch 'main' into 19-db-for-logos-and-get-requests-for-website
+| |\  
+| |/  
+|/|   
+* | 	93fbd5a	Matt Ong	Sun May 15 18:43:34 2022 +0800	latest blur changes, works over 20s unblur
+| * 	b312a13	camtheboom	Mon May 16 20:31:16 2022 +0800	Now able to make get requests to the json file and post photos to website
+|/  
+* 	4816871	Matt Ong	Sat May 14 16:44:31 2022 +0800	latest requirements.txt
+*   	6846d2f	camtheboom	Sat May 14 16:39:55 2022 +0800	Merge pull request #26 from mattshroom/17-blur-functionality-in-css-js
+|\  
+| *   	1c01798	mattshroom	Sat May 14 16:38:51 2022 +0800	Merge branch 'main' into 17-blur-functionality-in-css-js
+| |\  
+| |/  
+|/|   
+| * 	d4ec99b	Matt Ong	Thu May 12 11:44:58 2022 +0800	scoring system moved into br-17 + converted to js
+| * 	8ec0825	Matt Ong	Thu May 12 11:25:38 2022 +0800	Updated timer to 300s
+| * 	32aeccb	Matt Ong	Thu May 12 11:23:18 2022 +0800	added one-way blurring on button click
+| * 	a182e9c	Matt Ong	Thu May 12 11:17:58 2022 +0800	clearing up excess code
+| * 	63be47e	Matt Ong	Thu May 12 11:12:52 2022 +0800	template for unblurring over time completed
+| * 	27c828c	Matt Ong	Mon May 9 21:35:27 2022 +0800	prevent right click on image to reveal source(WIP)
+| * 	05a2f47	Matt Ong	Mon May 9 21:23:34 2022 +0800	prevent dragging of image to reveal
+| * 	090ac49	Matt Ong	Mon May 9 20:52:18 2022 +0800	ignore DS Store files
+| * 	c658944	Matt Ong	Mon May 9 20:51:25 2022 +0800	Blur functionality started on imgclick
+| * 	5a3d050	Matt Ong	Mon May 9 12:05:45 2022 +0800	basic blur functionality done via JS only
+| | * 	adbf128	Nicholas Chua	Thu May 19 23:07:07 2022 +0800	Delete button.html
+| | * 	0b072f2	nic-chua	Thu May 19 23:02:46 2022 +0800	new
+| | * 	607a581	nic-chua	Thu May 19 22:20:03 2022 +0800	login page styling FINALLL
+| | | * 	7360564	Matt Ong	Thu May 19 22:47:35 2022 +0800	On 23-css-styling-for-login-page: failed attempt at a merge lol
+| | |/| 
+| | | * 	c7d3397	Matt Ong	Thu May 19 22:47:35 2022 +0800	index on 23-css-styling-for-login-page: a31ac81 login styling done
+| | |/  
+| | * 	a31ac81	nic-chua	Thu May 19 16:47:37 2022 +0800	login styling done
+| | * 	9f8d2be	nic-chua	Wed May 18 20:16:07 2022 +0800	good to merge. did a basic nav bar but LKB gonna do a proper one
+| |/  
+|/|   
+* |   	afd7082	mattshroom	Sat May 14 16:25:58 2022 +0800	Merge pull request #25 from mattshroom/18-include-bootstrap-package-into-web-app
+|\ \  
+| * \   	14fb18f	mattshroom	Sat May 14 16:25:44 2022 +0800	Merge branch 'main' into 18-include-bootstrap-package-into-web-app
+| |\ \  
+| |/ /  
+|/| |   
+* | |   	2d80c5d	mattshroom	Thu May 12 23:28:46 2022 +0800	Merge pull request #22 from mattshroom/15-user-profile-crud-endpoint
+|\ \ \  
+| |_|/  
+|/| |   
+| * | 	cfeab46	camtheboom	Thu May 12 23:23:47 2022 +0800	CRUD endpoints created (- updating new passwords)
+| * | 	24044e0	camtheboom	Thu May 12 18:19:31 2022 +0800	CRUD endpoints need to review
+| * | 	e4eaae2	camtheboom	Thu May 12 16:04:14 2022 +0800	registrations and logins work now, database has been re set up.
+| * | 	6f1d2d4	camtheboom	Wed May 11 16:17:17 2022 +0800	 This branch is to get registrations and login databases working
+|/ /  
+| * 	f80c8ca	mattshroom	Sat May 14 16:23:05 2022 +0800	Update style.css
+| * 	5004bab	nic-chua	Thu May 12 18:59:13 2022 +0800	bootstrap acquired
+|/  
+*   	fdc7da6	mattshroom	Sun May 8 23:37:34 2022 +0800	Merge pull request #16 from mattshroom/10-database-setup-+-structure
+|\  
+| * 	291cfef	camtheboom	Sun May 8 23:33:07 2022 +0800	Added database
+|/  
+*   	2fa303c	mattshroom	Thu May 5 16:14:21 2022 +0800	Merge pull request #14 from mattshroom/7-logo-scraping-+-labelling
+|\  
+| | * 	9d0536e	mattshroom	Mon May 9 12:22:40 2022 +0800	Updated CITS3403-ERD.drawio with tables
+| | * 	291fa02	mattshroom	Mon Apr 25 14:08:53 2022 +0800	Latest Updates to ERD
+| | | * 	14acb92	Matt Ong	Mon May 9 12:05:12 2022 +0800	basic score calculations (WIP)
+| | | * 	cfc968d	Matt Ong	Sat May 7 11:00:54 2022 +0800	update gitignore to include DS_Store
+| | | * 	107e579	Matt Ong	Thu May 5 15:31:38 2022 +0800	score calculation formula
+| |_|/  
+|/| |   
+* | |   	dbc1a4c	camtheboom	Thu May 5 14:50:11 2022 +0800	Merge pull request #13 from mattshroom/12-front-end-setup-of-file-structure
+|\ \ \  
+| * | | 	2ea4e4d	Matt Ong	Mon May 2 13:47:13 2022 +0800	templates for button and import
+| * | | 	4504956	Matt Ong	Mon May 2 13:22:32 2022 +0800	Setup of flask application template
+|/ / /  
+* | | 	c91a274	mattshroom	Mon May 2 11:42:26 2022 +0800	added gitignore
+| | | * 	ba8f2d7	camtheboom	Sat May 7 16:03:28 2022 +0800	Working git ignore
+| | |/  
+| |/|   
+| * | 	9d5e865	camtheboom	Thu May 5 14:24:05 2022 +0800	added logos json yeet
+|/ /  
+* | 	506d5eb	mattshroom	Mon Apr 25 15:38:32 2022 +0800	README basic update
+* | 	4a87e77	mattshroom	Mon Apr 25 15:24:08 2022 +0800	Starter for README
+* | 	236c22c	mattshroom	Mon Apr 25 15:23:52 2022 +0800	Colour Scheme Ideas
+|/  
+* 	7833978	mattshroom	Fri Apr 22 13:56:20 2022 +0800	Updated CITS3403-ERD.drawio
+* 	e86fce7	mattshroom	Fri Apr 22 13:42:25 2022 +0800	Update CITS3403-ERD.drawio
+* 	fcba9fd	mattshroom	Fri Apr 22 12:48:15 2022 +0800	Delete Untitled Diagram.drawio
+* 	d265232	mattshroom	Fri Apr 22 12:48:05 2022 +0800	CITS3403-ERD.drawio update
+* 	55dfcae	mattshroom	Fri Apr 22 12:47:49 2022 +0800	Delete CITS3403.drawio
+* 	8d44673	mattshroom	Fri Apr 22 12:46:19 2022 +0800	CITS3403-ERD.drawio
+* 	598e674	mattshroom	Fri Apr 22 12:46:06 2022 +0800	CITS3403.drawio
+* 	f498f21	mattshroom	Fri Apr 22 12:38:20 2022 +0800	CITS3403.drawio
+* 	7e527e2	mattshroom	Fri Apr 22 12:32:48 2022 +0800	Added CITS3403.drawio
+* 	73cccc1	camtheboom	Tue Mar 22 22:02:42 2022 +0800	test commit cameron
+* 	622b468	LKBEAST	Tue Mar 22 21:59:04 2022 +0800	Testing commits Lachy
+* 	dd44343	mattshroom	Thu Mar 17 10:19:36 2022 +0800	Initial commit
