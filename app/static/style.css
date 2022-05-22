@@ -36,8 +36,8 @@ img.blur{
     text-align: center;
 }
 img {
-    height: 1em;
-    width: auto;
+    /* height: 1em;
+    width: auto; */
     display: inline-block;
     }
 .nav-item.nav-link{
@@ -246,6 +246,13 @@ a.register{
   color: white;
   font-family: "Segoe UI";
   font-size: larger;
+}
+
+.scoreboard-table{
+  background-color: #594F4F;
+  color: white;
+  font-family: "Segoe UI";
+  font-size: medium;
 }
 
 #info{
