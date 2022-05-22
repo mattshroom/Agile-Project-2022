@@ -1,5 +1,4 @@
 import os
-from pickle import TRUE
 
 from flask_sqlalchemy import SQLAlchemy
 basedir = os.path.abspath(os.path.dirname(__file__))
