@@ -95,27 +95,16 @@
 
     <!--  Make everything except save changes hidden -->
     <form method="POST" name="resultForm" id="results">
-        <div>
-            {{ form.hidden_tag() }}
-            <input type="hidden" id="scoreFinal" name="scoreFinal">
-                <!-- {{ form.score.label }} -->
-                {{ form.score }} 
-            </input>
-            <input type="hidden" id="guessNumFinal" name="guessNumFinal">
-                <!-- {{ form.guesses.label }} -->
-                {{ form.guesses }}
-            </input>
-            <input type="hidden" id="timeTakenFinal" name="timeTakenFinal">
-                <!-- {{ form.time.label }} -->
-                {{ form.time }}
-                <p id="timeTakenFinal"></p>
-            </input>
-            <input type="hidden" id="logoFinal" name="logoFinal">
-                <!-- {{ form.logo.label }} -->
-                {{ form.logo }}
-            </input>
-        </div>
-                <input type="button" id="resultSubmit"> Save Results{{ form.submit() }}</input>
+        {{ form.hidden_tag() }}
+            <!-- {{ form.score.label }} -->
+        {{ form.score }} 
+            <!-- {{ form.guesses.label }} -->
+        {{ form.guesses }}
+            <!-- {{ form.time.label }} -->
+        {{ form.time }}
+        <!-- <p id="timeTakenFinal"></p> -->
+            <!-- {{ form.logo.label }} -->
+        {{ form.logo }}
     </form> 
 
 <div class="center">
@@ -141,5 +130,6 @@
 <div id="app">
 
 </div>
+
 <script src="{{ url_for('static', filename='blur.js') }}"></script>
 {% endblock %}

@@ -1,4 +1,4 @@
-from flask import render_template, url_for, flash, redirect, request, Blueprint
+from flask import render_template, url_for, flash, redirect, request, Blueprint, session
 
 from app import app
 from app.forms import LoginForm, ResultsForm, RegistrationForm 
@@ -84,12 +84,14 @@ def register():
 @app.route('/button', methods=['GET', 'POST'])
 @login_required
 def button():
+    
     resultform = ResultsForm() 
     if resultform.validate_on_submit():
         result = Result(score=resultform.score.data, guesses=resultform.guesses.data, time=resultform.time.data, user_id=current_user.id,logo_id=resultform.logo.data)
         db.session.add(result)
         db.session.commit()
+        
         return redirect(url_for('index'))
-    print("meat")
+
     return render_template('button.html', title='Button!', form=resultform)
 

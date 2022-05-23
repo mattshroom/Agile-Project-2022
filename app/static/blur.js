@@ -7,6 +7,8 @@ let guessCount = 0;
 
 let numLogos = 19;
 
+
+
 const FULL_DASH_ARRAY = 283;
 const WARNING_THRESHOLD = 10;
 const ALERT_THRESHOLD = 5;
@@ -107,12 +109,12 @@ function resultsModal(){
 
 function submitForm(newScore) {
     /* Display Results */
-    document.getElementById("guessNumFinal").input = guessCount;
-    document.getElementById("timeTakenFinal").input = timePassed;
+    document.getElementById("guesses").value = guessCount;
+    document.getElementById("time").value = timePassed;
     console.log("here is score ", newScore)
-    document.getElementById("scoreFinal").input = newScore;
-    document.getElementById("logoFinal").input = id;
-    //document.getElementById("results").submit();
+    document.getElementById("score").value = newScore;
+    document.getElementById("logo").value = id;
+    document.getElementById("results").submit();
     //document.forms["resultForm"].submit();
     //document.forms["resultForm"].submit();
     //document.resultForm.submit();
