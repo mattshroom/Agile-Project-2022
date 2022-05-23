@@ -123,7 +123,7 @@ function submitForm() {
 }
 
 function startTimer() {
-  timerInterval = setInterval(() => {
+    timerInterval = setInterval(() => {
     timePassed = timePassed += 1;
     timeLeft = TIME_LIMIT - timePassed;
     document.getElementById("base-timer-label").innerHTML = formatTime(timeLeft);
@@ -235,7 +235,7 @@ function jsonImage() {
 
 
 function guessCompare() {
-
+  
   if (solved) {
     console.log("You've already won!")
 
@@ -329,6 +329,9 @@ function guessCompare() {
         }
       })
   }
+  // Reset the field after submit
+  document.getElementById("userGuess").value="";
+
 }
 
 var input = document.getElementById("userGuess");
