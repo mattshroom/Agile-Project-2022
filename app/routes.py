@@ -86,6 +86,16 @@ def register():
 def button():
     
     resultform = ResultsForm() 
+
+    user = User.query.get(current_user.id)
+    print("user is: ", user.id)
+
+    scores = db.session.query(Result).filter(user.id==current_user.id).all()
+    total = 0    
+    for s in scores:
+        total += s.score
+    current_user.average = round(total/len(scores))
+
     if resultform.validate_on_submit():
         result = Result(score=resultform.score.data, guesses=resultform.guesses.data, time=resultform.time.data, user_id=current_user.id,logo_id=resultform.logo.data)
         db.session.add(result)
@@ -94,4 +104,3 @@ def button():
         return redirect(url_for('index'))
 
     return render_template('button.html', title='Button!', form=resultform)
-

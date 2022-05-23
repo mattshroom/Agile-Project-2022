@@ -37,16 +37,16 @@
                             var h = Math.floor(leftTime / 3600);
                             var m = Math.floor((leftTime - (h * 3600)) / 60);
                             var s = Math.floor(leftTime % 60);
-                            if(h < 1){
-                                h = "0"+h;
+                            if (h < 1) {
+                                h = "0" + h;
                             }
-                            if(m < 10){
-                                m = "0"+m;
+                            if (m < 10) {
+                                m = "0" + m;
                             }
-                            if(s < 10){
-                                s= "0"+s;
+                            if (s < 10) {
+                                s = "0" + s;
                             }
-                            timer.innerHTML =  h + " : " + m + " : " + s;
+                            timer.innerHTML = h + " : " + m + " : " + s;
                             leftTime--;
                         }
                     </script>
@@ -76,36 +76,36 @@
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <div class="modal-body">
-                <h6>Results</h6>
-                <div>Win %</div>
+                <div>Average Score: {{ current_user.average }}</div>
                 <div id="guessNumModal">Guesses</div>
                 <div id="timeTakenModal">Time</div>
                 <div id="scoreModal">Score</div>
             </div>
             <div class="modal-footer">
-                <button type="button" class="btn btn-primary" data-bs-dismiss="modal" onclick="submitForm()">Close</button>
+                <button type="button" class="btn btn-primary" data-bs-dismiss="modal"
+                    onclick="submitForm()">Close</button>
 
             </div>
         </div>
     </div>
 </div>
 
-    <!-- Hidden Form For Game Stats -->
-    <!-- if solved then form submit -->
+<!-- Hidden Form For Game Stats -->
+<!-- if solved then form submit -->
 
-    <!--  Make everything except save changes hidden -->
-    <form method="POST" name="resultForm" id="results">
-        {{ form.hidden_tag() }}
-            <!-- {{ form.score.label }} -->
-        {{ form.score }} 
-            <!-- {{ form.guesses.label }} -->
-        {{ form.guesses }}
-            <!-- {{ form.time.label }} -->
-        {{ form.time }}
-        <!-- <p id="timeTakenFinal"></p> -->
-            <!-- {{ form.logo.label }} -->
-        {{ form.logo }}
-    </form> 
+<!--  Make everything except save changes hidden -->
+<form method="POST" name="resultForm" id="results">
+    {{ form.hidden_tag() }}
+    <!-- {{ form.score.label }} -->
+    {{ form.score }}
+    <!-- {{ form.guesses.label }} -->
+    {{ form.guesses }}
+    <!-- {{ form.time.label }} -->
+    {{ form.time }}
+    <!-- <p id="timeTakenFinal"></p> -->
+    <!-- {{ form.logo.label }} -->
+    {{ form.logo }}
+</form>
 
 <div class="center">
     <img id="imgID" class="startingBlur" draggable="false" src="" height="300px" width="300px"

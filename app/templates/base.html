@@ -46,7 +46,7 @@
         <ul class="navbar-nav mx-auto">
             <li>
                 <a class="nav-item nav-link" href="{{ url_for('button') }}" id="Blurgo">
-                     Blurgo 
+                    Blurgo
                 </a>
             </li>
         </ul>
@@ -145,7 +145,6 @@
         </div>
     </div>
 
-
     {% with messages = get_flashed_messages() %}
     {% if messages %}
     <ul>
@@ -156,7 +155,6 @@
     {% endif %}
     {% endwith %}
     {% block content %}{% endblock %}
-
 
     <br>
     <div class="footer">
