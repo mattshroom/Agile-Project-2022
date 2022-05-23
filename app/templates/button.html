@@ -67,6 +67,7 @@
 </div>
 
 <!-- Modal -->
+<!-- Fix Modal -->
 <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
     <div class="modal-dialog">
         <div class="modal-content" id="results-modal">
@@ -77,17 +78,34 @@
             <div class="modal-body">
                 <h6>Results</h6>
                 <div>Win %</div>
-                <div>Guesses</div>
-                <div>Time</div>
-                <div>Score</div>
+                <div id="guessNumModal">Guesses</div>
+                <div id="timeTakenModal">Time</div>
+                <div id="scoreModal">Score</div>
             </div>
             <div class="modal-footer">
-                <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-primary" data-bs-dismiss="modal" onclick="submitForm()">Close</button>
 
             </div>
         </div>
     </div>
 </div>
+
+    <!-- Hidden Form For Game Stats -->
+    <!-- if solved then form submit -->
+
+    <!--  Make everything except save changes hidden -->
+    <form method="POST" name="resultForm" id="results">
+        {{ form.hidden_tag() }}
+            <!-- {{ form.score.label }} -->
+        {{ form.score }} 
+            <!-- {{ form.guesses.label }} -->
+        {{ form.guesses }}
+            <!-- {{ form.time.label }} -->
+        {{ form.time }}
+        <!-- <p id="timeTakenFinal"></p> -->
+            <!-- {{ form.logo.label }} -->
+        {{ form.logo }}
+    </form> 
 
 <div class="center">
     <img id="imgID" class="startingBlur" draggable="false" src="" height="300px" width="300px"
@@ -100,10 +118,10 @@
     <div class="buttonGuess">
         <button class="btn btn-lg btn-primary" id="submitButton" onclick="guessCompare()">Submit</button>
     </div>
-    <button id="submit" type="submit" onclick="guessCompare()" onkeypress="guessCompare()" hidden>Submit</button>
+    <button id="submitBtn" type="submit" onclick="guessCompare()" onkeypress="guessCompare()" hidden>Submit</button>
 
 </div>
-<button id="submit" type="submit" onclick="guessCompare()" onkeypress="guessCompare()" hidden>Submit</button>
+<button id="submitBtn" type="submit" onclick="guessCompare()" onkeypress="guessCompare()" hidden>Submit</button>
 
 <div id="superdiv">
 
@@ -112,5 +130,6 @@
 <div id="app">
 
 </div>
+
 <script src="{{ url_for('static', filename='blur.js') }}"></script>
 {% endblock %}

@@ -231,6 +231,9 @@ input.guessBox {
   border: none;
 }
 
+/* #results{
+    display: none;
+} */
 .profilePage,
 .registrationPage,
 .loginPage {

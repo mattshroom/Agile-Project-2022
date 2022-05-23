@@ -19,6 +19,8 @@
     {% else %}
     <title>Welcome to Blurgo</title>
     {% endif %}
+
+    <link rel="icon" href="../static/logos/Icons/blurgo_favicon2.gif" type="image/gif" />
 </head>
 
 <body>
@@ -29,26 +31,30 @@
         <!-- <First Item> -->
         <ul class="navbar-nav">
             <li>
-                <a class="nav-item nav-link" href="{{ url_for('index') }}" id="profile"><img
-                        src="/static/logos/Icons/Profile.png"></a>
+                <a class="nav-item nav-link" href="{{ url_for('index') }}" id="profile">
+                    <img class="icon" src="/static/logos/Icons/Profile.png">
+                </a>
             </li>
             <li>
                 <button type="button" class="nav-item nav-link" id="info" data-bs-toggle="modal"
-                    data-bs-target="#howtoplaymodal"><i class="fa-solid fa-circle-info"></i><img
-                        src="/static/logos/Icons/Info.png"></button>
+                    data-bs-target="#howtoplaymodal"><i class="fa-solid fa-circle-info"></i>
+                    <img class="icon" src="/static/logos/Icons/Info.png">
+                </button>
             </li>
         </ul>
 
         <ul class="navbar-nav mx-auto">
             <li>
-                <a class="nav-item nav-link" href="{{ url_for('button') }}" id="Blurgo">Blurgo</a>
+                <a class="nav-item nav-link" href="{{ url_for('button') }}" id="Blurgo">
+                     Blurgo 
+                </a>
             </li>
         </ul>
         <!-- Far right Items -->
         <ul class="navbar-nav margin-left: auto!important;">
             <li>
                 <a class="nav-item nav-link" id="Scoreboard" href="#scoreboardModal" data-bs-toggle="modal"
-                    aria-expanded="false"> <img src="/static/logos/Icons/Standings.png"></a>
+                    aria-expanded="false"> <img class="icon" src="/static/logos/Icons/Standings.png"></a>
             </li>
             <li>
                 <div class="dropdown">
@@ -56,7 +62,7 @@
                     <!-- <li> -->
                     <button class="btn dropdown-toggle" type="button" id="dropdownMenuButton" data-bs-toggle="dropdown"
                         aria-haspopup="true" aria-expanded="false">
-                        <img src="/static/logos/Icons/Settings.png">
+                        <img class="icon" src="/static/logos/Icons/Settings.png">
                     </button>
                     <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="dropdownMenuButton">
                         <li><a class="dropdown-item" href="{{ url_for('logout') }}">Logout</a></li>

@@ -1,15 +1,14 @@
-from flask import render_template, url_for, flash, redirect, request, Blueprint
+from flask import render_template, url_for, flash, redirect, request, Blueprint, session
 
 from app import app
-from app.forms import LoginForm 
+from app.forms import LoginForm, ResultsForm, RegistrationForm 
 
 from app import db
 from flask_login import login_user, login_required, logout_user, current_user
 
-from app.models import User
+from app.models import User, Result
 from werkzeug.urls import url_parse
-
-from app.forms import RegistrationForm 
+from datetime import datetime
 
 
 @app.route('/')
@@ -45,10 +44,6 @@ def index():
 
     return render_template("index.html",title="Home",user=user, posts=posts)
 
-@app.route('/button')
-@login_required
-def button():
-    return render_template("button.html", title="Button!")
 
 @app.route('/login', methods=['GET', 'POST'])
 def login():
@@ -86,6 +81,17 @@ def register():
         return redirect(url_for('login'))
     return render_template('register.html', title='Register', form=form)
 
+@app.route('/button', methods=['GET', 'POST'])
+@login_required
+def button():
+    
+    resultform = ResultsForm() 
+    if resultform.validate_on_submit():
+        result = Result(score=resultform.score.data, guesses=resultform.guesses.data, time=resultform.time.data, user_id=current_user.id,logo_id=resultform.logo.data)
+        db.session.add(result)
+        db.session.commit()
+        
+        return redirect(url_for('index'))
 
-
+    return render_template('button.html', title='Button!', form=resultform)
 

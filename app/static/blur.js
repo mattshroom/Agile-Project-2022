@@ -1,11 +1,14 @@
 const baseScore = 100000;
 var toggle = false;
 var solved = false;
-var startTime, stopTime, timeDiff, guessNum, score;
+var newScore;
+var score;
 let seed;
 let guessCount = 0;
 
 let numLogos = 19;
+
+
 
 const FULL_DASH_ARRAY = 283;
 const WARNING_THRESHOLD = 10;
@@ -29,7 +32,9 @@ const COLOR_CODES = {
 function seedImage() {
   today = new Date();
   epoch = new Date(0);
+
   seed = today - epoch;
+  // 8.64e7 = 86 400 000 ms = 1 day
   var fullDaysSinceEpoch = Math.floor(seed / 8.64e7);
   console.log(fullDaysSinceEpoch);
 
@@ -84,22 +89,41 @@ function onTimesUp() {
   clearInterval(timerInterval);
   removeBlur();
   document.getElementById("submitButton").disabled = true;
-  document.getElementById("submit").disabled = true;
+  document.getElementById("submitBtn").disabled = true;
   document.getElementById("userGuess").disabled = true;
 }
 
 function calculateScore(guessNum, timeTaken) {
   if (!solved) {
-    var score = 0
+    newScore = 0
   }
   else if (solved) {
-    var score = baseScore - (5 / 12) * timeTaken - (50000 - (5 / guessNum) * 10000);
+    newScore = Math.round(baseScore - (5 / 12) * timeTaken - (50000 - (5 / guessNum) * 10000));
   }
-  return Math.round(score);
+  resultsModal(newScore);
+  return newScore;
+}
+function resultsModal(){
+  document.getElementById("guessNumModal").innerHTML = "Guesses: " + guessCount;
+  document.getElementById("timeTakenModal").innerHTML = "Time Used (sec): " + timePassed;
+  document.getElementById("scoreModal").innerHTML = "Score: " + newScore;
+}
+
+function submitForm() {
+    /* Display Results */
+    document.getElementById("guesses").value = guessCount;
+    document.getElementById("time").value = timePassed;
+    console.log(newScore)
+    document.getElementById("score").value = newScore;
+    document.getElementById("logo").value = id;
+    document.getElementById("results").submit();
+    //document.forms["resultForm"].submit();
+    //document.forms["resultForm"].submit();
+    //document.resultForm.submit();
 }
 
 function startTimer() {
-  timerInterval = setInterval(() => {
+    timerInterval = setInterval(() => {
     timePassed = timePassed += 1;
     timeLeft = TIME_LIMIT - timePassed;
     document.getElementById("base-timer-label").innerHTML = formatTime(timeLeft);
@@ -211,7 +235,7 @@ function jsonImage() {
 
 
 function guessCompare() {
-
+  
   if (solved) {
     console.log("You've already won!")
 
@@ -245,7 +269,7 @@ function guessCompare() {
           solved = true;
           console.log("Winner in ", guessCount)
           document.getElementById("submitButton").disabled = true;
-          document.getElementById("submit").disabled = true;
+          document.getElementById("submitBtn").disabled = true;
           document.getElementById("userGuess").disabled = true;
         }
 
@@ -282,7 +306,7 @@ function guessCompare() {
           console.log("Game Over Man, Game Over");
 
           document.getElementById("submitButton").disabled = true;
-          document.getElementById("submit").disabled = true;
+          document.getElementById("submitBtn").disabled = true;
           document.getElementById("userGuess").disabled = true;
         }
         else if (guessCount >= 6) {
@@ -305,18 +329,21 @@ function guessCompare() {
         }
       })
   }
+  // Reset the field after submit
+  document.getElementById("userGuess").value="";
+
 }
 
 var input = document.getElementById("userGuess");
 input.addEventListener("keypress", function (event) {
   if (event.key === "Enter") {
     event.preventDefault();
-    document.getElementById("submit").click();
+    document.getElementById("submitBtn").click();
   }
 });
 
 // Start the ReadyModal on load
-$(document).ready(function () {
+window.addEventListener('load', function() {
   $("#readyModal").modal('show');
 });
 
