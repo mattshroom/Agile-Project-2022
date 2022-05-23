@@ -1,19 +1,94 @@
-* 	9721dcf	Matt Ong	Sun May 22 16:58:10 2022 +0800	README essentially completed
-*   	426fc92	Matt Ong	Sun May 22 16:24:23 2022 +0800	Merge remote-tracking branch 'origin/main' into 51-unit-testing
+* 	35f3c9f	Nicholas Chua	Mon May 23 11:52:27 2022 +0800	steven strange (#73)
+*   	30d4199	cameron	Mon May 23 11:45:38 2022 +0800	Merge branch 'main' of https://github.com/mattshroom/Agile-Project-2022 into main
 |\  
-| * 	4fbb11c	Nicholas Chua	Sun May 22 16:22:49 2022 +0800	how to play modal complete (#50)
-* | 	9722d75	Matt Ong	Sun May 22 16:23:50 2022 +0800	unit test started
-* | 	7b7d038	Matt Ong	Sun May 22 16:23:10 2022 +0800	updating readme with more details
+* | 	a7dc5b4	cameron	Mon May 23 11:45:31 2022 +0800	how to play fix
+| | * 	9aa2117	nic-chua	Mon May 23 11:47:50 2022 +0800	steven strange
+| |/  
+| * 	41d6649	Matt Ong	Mon May 23 10:39:25 2022 +0800	reset guess input after submit
+| * 	f418bea	mattshroom	Mon May 23 10:35:05 2022 +0800	66 including blurgo logo (#71)
+| * 	f037d25	mattshroom	Mon May 23 10:32:34 2022 +0800	52 profile page design (#70)
+|/  
+| * 	ba48f96	Matt Ong	Mon May 23 10:31:23 2022 +0800	able to send correct score after closing modal
+| * 	942f74e	Matt Ong	Mon May 23 10:19:56 2022 +0800	Able to submit data to results table in DB
+| * 	1ab1abe	Lachlan Bassi	Mon May 23 09:47:02 2022 +0800	Some state of an operating results form
+| *   	5c2881c	Lachlan Bassi	Mon May 23 03:02:15 2022 +0800	Merge remote-tracking branch 'origin/main' into 52-profile-page-design
+| |\  
+| |/  
+|/|   
+* | 	36f81b4	camtheboom	Mon May 23 02:40:42 2022 +0800	didnt use tables for it works (#67)
+| * 	2d3df72	Lachlan Bassi	Mon May 23 03:01:03 2022 +0800	Co-authored-by: mattshroom <mattshroom@users.noreply.github.com>
+| | * 	980168c	Matt Ong	Mon May 23 09:48:30 2022 +0800	removed blurgo logo from info icon
+| | * 	17b2550	Matt Ong	Mon May 23 01:25:46 2022 +0800	adding icon classes to navbar icons
+| | * 	1d4eb55	Matt Ong	Mon May 23 01:04:41 2022 +0800	include icons into favicon
+| |/  
+|/|   
+| | * 	4ab8430	cameron	Mon May 23 02:32:43 2022 +0800	didnt use tables for it works
+| |/  
+|/|   
+* | 	35d8bee	Nicholas Chua	Mon May 23 01:01:35 2022 +0800	62 fixing profile icon (#64)
+| | *   	3b089cd	Matt Ong	Mon May 23 01:03:04 2022 +0800	On main: stashing icon changes
+| |/|\  
+|/| | | 
+| | | * 	9caf1d7	Matt Ong	Mon May 23 01:03:04 2022 +0800	untracked files on main: 8916cde added previous 0s for HH:MM:SS
+| | * 	a7d91bd	Matt Ong	Mon May 23 01:03:04 2022 +0800	index on main: 8916cde added previous 0s for HH:MM:SS
+| |/  
+|/|   
+| | * 	258a2df	nic-chua	Mon May 23 00:52:47 2022 +0800	plz
+| | * 	90f3f3c	nic-chua	Mon May 23 00:49:09 2022 +0800	cheeseburger 2
+| | * 	e4d812d	nic-chua	Mon May 23 00:13:09 2022 +0800	fixed styles
+| |/  
+|/|   
+* | 	8916cde	Matt Ong	Sun May 22 23:02:42 2022 +0800	added previous 0s for HH:MM:SS
+* | 	1e2616f	mattshroom	Sun May 22 22:47:55 2022 +0800	Added countdown timer until blurgo update (#61)
+| | * 	cbb14b3	Matt Ong	Sun May 22 23:00:53 2022 +0800	added the prior 0s to HH:MM:SS
+| | * 	6312bb7	Matt Ong	Sun May 22 22:45:38 2022 +0800	comments for countdown timer
+| | * 	22694df	Matt Ong	Sun May 22 22:42:38 2022 +0800	Added countdown timer until blurgo update
+| |/  
+|/|   
+* | 	d6935e3	mattshroom	Sun May 22 22:35:05 2022 +0800	51 unit testing (#59)
+|/  
+| * 	c9e5acd	Nicholas Chua	Sun May 22 22:34:39 2022 +0800	Update README.md
+| * 	511a1a6	Nicholas Chua	Sun May 22 22:34:15 2022 +0800	Update README.md
+| * 	66f0e78	Nicholas Chua	Sun May 22 22:22:39 2022 +0800	Update README.md
+| * 	25fc8f6	Matt Ong	Sun May 22 22:06:16 2022 +0800	remove hr tag
+| *   	a0c6f75	Matt Ong	Sun May 22 22:03:49 2022 +0800	Merge remote-tracking branch 'origin/main' into 51-unit-testing
+| |\  
+| |/  
+|/|   
+* | 	9683bd8	Nicholas Chua	Sun May 22 20:55:33 2022 +0800	cleaned code (#58)
+| * 	5cd7d0c	Matt Ong	Sun May 22 21:55:45 2022 +0800	removing unnecessary imports
+| * 	6ceb103	Matt Ong	Sun May 22 21:52:16 2022 +0800	Attempt at selenium testing
+| * 	9721dcf	Matt Ong	Sun May 22 16:58:10 2022 +0800	README essentially completed
+| *   	426fc92	Matt Ong	Sun May 22 16:24:23 2022 +0800	Merge remote-tracking branch 'origin/main' into 51-unit-testing
+| |\  
+| * | 	9722d75	Matt Ong	Sun May 22 16:23:50 2022 +0800	unit test started
+| * | 	7b7d038	Matt Ong	Sun May 22 16:23:10 2022 +0800	updating readme with more details
+| | | *   	302dd07	nic-chua	Sun May 22 20:52:53 2022 +0800	cleaned code
+| | | |\  
+| |_|_|/  
+|/| | |   
+* | | | 	4ed0100	Matt Ong	Sun May 22 18:36:03 2022 +0800	Reset input field and prevent empty guess
+* | | | 	fca8e34	mattshroom	Sun May 22 18:25:42 2022 +0800	latest working scoreboard modal, needs link to db (#54)
+| | | * 	bb7f3bc	nic-chua	Sun May 22 19:37:32 2022 +0800	cleaned code
+| | |/  
+| | | * 	90888d3	Matt Ong	Sun May 22 18:15:29 2022 +0800	Styling of scoreboard modal
+| | | *   	ec1ede8	Matt Ong	Sun May 22 18:05:48 2022 +0800	Merge remote-tracking branch 'origin/main' into 49-todays-scoreboard-modal
+| | | |\  
+| |_|_|/  
+|/| | |   
+* | | | 	58e45cf	Matt Ong	Sun May 22 17:41:15 2022 +0800	logs as of 22-5-22
+| |/ /  
+|/| |   
+* | | 	4fbb11c	Nicholas Chua	Sun May 22 16:22:49 2022 +0800	how to play modal complete (#50)
+|/ /  
+| * 	09b2f29	Matt Ong	Sun May 22 11:37:01 2022 +0800	latest working scoreboard modal, need link to db
 |/  
 | *   	b834c0c	mattshroom	Sun May 22 16:21:33 2022 +0800	Merge branch 'main' into 39-create-how-to-play-modal
 | |\  
 | |/  
 |/|   
-| * 	70d7453	nic-chua	Sat May 21 19:43:09 2022 +0800	how to play modal complete
-| | * 	09b2f29	Matt Ong	Sun May 22 11:37:01 2022 +0800	latest working scoreboard modal, need link to db
-| |/  
-|/|   
 * | 	4155d0c	camtheboom	Sat May 21 19:29:23 2022 +0800	modal created (#48)
+| * 	70d7453	nic-chua	Sat May 21 19:43:09 2022 +0800	how to play modal complete
 | | * 	ff0d243	Lachlan Bassi	Sun May 22 11:30:05 2022 +0800	To be deleteted
 | | *   	79cc6e2	Lachlan Bassi	Sat May 21 18:35:32 2022 +0800	Merge branch 'main' of https://github.com/mattshroom/Agile-Project-2022
 | | |\  
@@ -116,10 +191,6 @@
 | | * 	adbf128	Nicholas Chua	Thu May 19 23:07:07 2022 +0800	Delete button.html
 | | * 	0b072f2	nic-chua	Thu May 19 23:02:46 2022 +0800	new
 | | * 	607a581	nic-chua	Thu May 19 22:20:03 2022 +0800	login page styling FINALLL
-| | | * 	7360564	Matt Ong	Thu May 19 22:47:35 2022 +0800	On 23-css-styling-for-login-page: failed attempt at a merge lol
-| | |/| 
-| | | * 	c7d3397	Matt Ong	Thu May 19 22:47:35 2022 +0800	index on 23-css-styling-for-login-page: a31ac81 login styling done
-| | |/  
 | | * 	a31ac81	nic-chua	Thu May 19 16:47:37 2022 +0800	login styling done
 | | * 	9f8d2be	nic-chua	Wed May 18 20:16:07 2022 +0800	good to merge. did a basic nav bar but LKB gonna do a proper one
 | |/  
