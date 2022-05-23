@@ -107,11 +107,11 @@ function resultsModal(){
 
 function submitForm(newScore) {
     /* Display Results */
-    document.getElementById("guessNumFinal").value = guessCount;
-    document.getElementById("timeTakenFinal").value = timePassed;
+    document.getElementById("guessNumFinal").input = guessCount;
+    document.getElementById("timeTakenFinal").input = timePassed;
     console.log("here is score ", newScore)
-    document.getElementById("scoreFinal").value = newScore;
-    document.getElementById("logoFinal").value = id;
+    document.getElementById("scoreFinal").input = newScore;
+    document.getElementById("logoFinal").input = id;
     //document.getElementById("results").submit();
     //document.forms["resultForm"].submit();
     //document.forms["resultForm"].submit();

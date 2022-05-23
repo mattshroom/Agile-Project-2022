@@ -1,5 +1,5 @@
 from flask_wtf import FlaskForm
-from wtforms import StringField, PasswordField, BooleanField, SubmitField, IntegerField
+from wtforms import StringField, PasswordField, BooleanField, SubmitField, IntegerField, HiddenField
 from wtforms.validators import ValidationError, DataRequired, Email, EqualTo
 from app.models import User
 
@@ -30,8 +30,8 @@ class RegistrationForm(FlaskForm):
             raise ValidationError('Please use a different email address.')
 
 class ResultsForm(FlaskForm):
-        score =  IntegerField('finalscore', validators=[DataRequired()])
-        guesses = IntegerField('finalguesses', validators=[DataRequired()])
-        time = IntegerField('finaltime', validators=[DataRequired()])
-        logo = IntegerField('finallogo', validators=[DataRequired()])
+        score =  HiddenField('finalscore', validators=[DataRequired()])
+        guesses = HiddenField('finalguesses', validators=[DataRequired()])
+        time = HiddenField('finaltime', validators=[DataRequired()])
+        logo = HiddenField('finallogo', validators=[DataRequired()])
         submit = SubmitField('submitResult')

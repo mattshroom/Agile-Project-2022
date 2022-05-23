@@ -67,6 +67,7 @@
 </div>
 
 <!-- Modal -->
+<!-- Fix Modal -->
 <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
     <div class="modal-dialog">
         <div class="modal-content" id="results-modal">
@@ -92,24 +93,28 @@
     <!-- Hidden Form For Game Stats -->
     <!-- if solved then form submit -->
 
+    <!--  Make everything except save changes hidden -->
     <form method="POST" name="resultForm" id="results">
-                {{ form.hidden_tag() }}
-                <input type="hidden" id="scoreFinal" name="scoreFinal">
-                    {{ form.score.label }}
-                    {{ form.score }}
-                </input>
-                <input type="hidden" id="guessNumFinal" name="guessNumFinal">
-                    {{ form.guesses.label }}
-                    {{ form.guesses }}
-                </input>
-                <input type="hidden" id="timeTakenFinal" name="timeTakenFinal">
-                    {{ form.time.label }}
-                    {{ form.time }}
-                </input>
-                <input type="hidden" id="logoFinal" name="logoFinal">
-                    {{ form.logo.label }}
-                    {{ form.logo}}
-                </input>
+        <div>
+            {{ form.hidden_tag() }}
+            <input type="hidden" id="scoreFinal" name="scoreFinal">
+                <!-- {{ form.score.label }} -->
+                {{ form.score }} 
+            </input>
+            <input type="hidden" id="guessNumFinal" name="guessNumFinal">
+                <!-- {{ form.guesses.label }} -->
+                {{ form.guesses }}
+            </input>
+            <input type="hidden" id="timeTakenFinal" name="timeTakenFinal">
+                <!-- {{ form.time.label }} -->
+                {{ form.time }}
+                <p id="timeTakenFinal"></p>
+            </input>
+            <input type="hidden" id="logoFinal" name="logoFinal">
+                <!-- {{ form.logo.label }} -->
+                {{ form.logo }}
+            </input>
+        </div>
                 <input type="button" id="resultSubmit"> Save Results{{ form.submit() }}</input>
     </form> 
 
