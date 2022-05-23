@@ -1,6 +1,7 @@
 const baseScore = 100000;
 var toggle = false;
 var solved = false;
+var newScore;
 var score;
 let seed;
 let guessCount = 0;
@@ -92,12 +93,11 @@ function onTimesUp() {
 
 function calculateScore(guessNum, timeTaken) {
   if (!solved) {
-    var newScore = 0
+    newScore = 0
   }
   else if (solved) {
-    var newScore = Math.round(baseScore - (5 / 12) * timeTaken - (50000 - (5 / guessNum) * 10000));
+    newScore = Math.round(baseScore - (5 / 12) * timeTaken - (50000 - (5 / guessNum) * 10000));
   }
-  submitForm(newScore);
   resultsModal(newScore);
   return newScore;
 }
@@ -107,11 +107,11 @@ function resultsModal(){
   document.getElementById("scoreModal").innerHTML = "Score: " + newScore;
 }
 
-function submitForm(newScore) {
+function submitForm() {
     /* Display Results */
     document.getElementById("guesses").value = guessCount;
     document.getElementById("time").value = timePassed;
-    console.log("here is score ", newScore)
+    console.log(newScore)
     document.getElementById("score").value = newScore;
     document.getElementById("logo").value = id;
     document.getElementById("results").submit();
